@@ -1,0 +1,36 @@
+
+.basic-mes{
+	margin:20px 0;
+}
+.aj-content{
+	width:88%;
+	margin:0 auto;
+}
+.aj-border-lelf{
+	border-left:1px solid #D1D1D1;
+}
+.aj-border-right{
+	border-right:1px solid #D1D1D1;
+}
+
+.shop-sum{
+	line-height:50px;
+	border-top:1px solid #D1D1D1;
+	margin-top:10px;
+	font-size: 24px;
+}
+.shop-sum i{
+	font-style: normal;
+	display: inline-block;
+	margin-right:5px;
+}
+.shop-btn{
+	margin:10px 0;
+}
+.apply-btn{
+	color: #ea5920;
+	cursor: pointer;
+}
+.ui-dialog{
+	width:880px !important;
+}

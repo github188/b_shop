@@ -1,0 +1,41 @@
+.widget-body{
+	width:700px;
+	height:400px;
+	margin:0 auto;
+	border:1px solid #D1D1D1;
+	font-size:18px;
+}
+.clear:after{
+	content: "";
+	height:0;
+	overflow: hidden;
+	display: block;
+	clear: both;
+}
+.input-cell{
+	margin-bottom:20px;
+}
+.input-cell .input-tips{
+	width:20%;
+	float: left;
+}
+.input-cell .err-tips{
+	color:#FF0000;
+}
+.input-cell .right-tips{
+	color:green;
+}
+.input-cell .input-content{
+	width:78%;
+	float: right;
+}
+.input-cell .input-content .tips{
+	margin-top:6px;
+}
+.btn-cell{
+	text-align: center;
+}
+.btn-cell .btn{
+	width:80%;
+	
+}

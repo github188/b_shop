@@ -1,0 +1,10 @@
+*{
+	font-style: normal;
+}
+
+.ui-dialog{
+	width:880px !important;
+}
+.page-input{
+	width:60px;
+}

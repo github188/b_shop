@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>企业商户管理平台</title>
+
+		<meta name="description" content="top menu &amp; navigation" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="../../css/jquery-ui.min.css" />
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../../css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/ace-skins.min.css" />
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../../css/index.css" />
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="../../js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="../../js/html5shiv.min.js"></script>
+		<script src="../../js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+		<div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="fa fa-leaf"></i>
+							B门户
+						</small>
+					</a>
+
+					<!-- /section:basics/navbar.layout.brand -->
+
+					<!-- #section:basics/navbar.toggle -->
+					<button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
+						<span class="sr-only">Toggle user menu</span>
+
+						<img src="../../images//avatars/user.jpg" alt="Jason's Photo" />
+					</button>
+
+					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".sidebar">
+						<span class="sr-only">Toggle sidebar</span>
+
+						<span class="icon-bar"></span>
+
+						<span class="icon-bar"></span>
+
+						<span class="icon-bar"></span>
+					</button>
+
+					<!-- /section:basics/navbar.toggle -->
+				</div>
+
+				<!-- #section:basics/navbar.dropdown -->
+				<div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+					<ul class="nav ace-nav">
+
+						<!-- #section:basics/navbar.user_menu -->
+						<li class="light-blue user-min">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="../../images//avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="profile.html">
+										<i class="ace-icon fa fa-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-power-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- /section:basics/navbar.user_menu -->
+					</ul>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<!-- #section:basics/sidebar.horizontal -->
+			<div id="sidebar" class="sidebar      h-sidebar                navbar-collapse collapse">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<button class="btn btn-success">
+							<i class="ace-icon fa fa-signal"></i>
+						</button>
+
+						<button class="btn btn-info">
+							<i class="ace-icon fa fa-pencil"></i>
+						</button>
+
+						<!-- #section:basics/sidebar.layout.shortcuts -->
+						<button class="btn btn-warning">
+							<i class="ace-icon fa fa-users"></i>
+						</button>
+
+						<button class="btn btn-danger">
+							<i class="ace-icon fa fa-cogs"></i>
+						</button>
+
+						<!-- /section:basics/sidebar.layout.shortcuts -->
+					</div>
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!-- /.sidebar-shortcuts -->
+
+				<ul class="nav nav-list">
+					<li class="active open hover">
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> 我是商户 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="hover">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text"> 交易管理 </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="hover">
+								<a href="tables.html" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
+									交易记录
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="hover">
+								<a href="typography.html" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
+									对账单
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+						
+						</ul>
+					</li>
+
+					<li class="hover">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list"></i>
+							<span class="menu-text"> 结算管理 </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="hover">
+								<a href="tables.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Simple &amp; Dynamic
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="hover">
+								<a href="jqgrid.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									jqGrid plugin
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="hover">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text"> 商户资料管理 </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="hover">
+								<a href="form-elements.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="hover">
+								<a href="form-wizard.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wizard &amp; Validation
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="hover">
+								<a href="wysiwyg.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wysiwyg &amp; Markdown
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="hover">
+								<a href="dropzone.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Dropzone File Upload
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="hover">
+						<a href="widgets.html">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text"> 操作员管理 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					
+				</ul><!-- /.nav-list -->
+
+				<!-- #section:basics/sidebar.layout.minimize -->
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+				<!-- /section:basics/sidebar.layout.minimize -->
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+
+			<!-- /section:basics/sidebar.horizontal -->
+			<div class="main-content">
+				<div class="page-content">
+					<div class="page-content-area">
+						<div class="row aj-content">
+							<div class="col-xs-12">
+							
+									<div class="basic-mes label label-info arrowed-in-right arrowed label-xlg">基本信息:</div>
+									<div id="user-profile-1" class="user-profile row">
+										
+										<div class="col-xs-12 col-sm-3 center">
+											
+											<div>
+												<!-- #section:pages/profile.picture -->
+												<span class="profile-picture">
+													<img id="avatar" class="editable img-responsive editable-click editable-empty" alt="Alex's Avatar" src="../../img/icon/kiliduo.jpg"></img>
+												</span>
+
+												<!-- /section:pages/profile.picture -->
+												<div class="space-4"></div>
+												<div class="align-left">尊敬的：</div>
+												<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+													
+													<div class="inline position-relative">
+														<a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">			
+															<span id="userName" class="white">JST商户</span>
+														</a>													
+													</div>
+												</div>
+												<div class="align-right">欢迎加入捷顺通</div>
+											</div>
+
+											<div class="space-6"></div>
+
+											<!-- #section:pages/profile.contact -->
+											<div class="profile-contact-info">
+												<div class="profile-contact-links align-left">
+													<p class="">
+														<i class="ace-icon fa fa-plus-circle bigger-120 green"></i>
+														商户等级：<span id="userLevel">C级别</span>
+													</p>
+
+													<p class="">
+														<i class="ace-icon fa fa-envelope bigger-120 pink"></i>
+														鉴权状态：<span id="authenState">待鉴权</span>
+													</p>
+
+													<p class="">
+														<i class="ace-icon fa fa-globe bigger-125 blue"></i>
+														<span id="authenContent" class="apply-btn green">您尚未完成鉴权认证，请立即点此申请</span>!
+													</p>
+												</div>
+
+												<div class="space-6"></div>
+												
+											</div>
+
+										
+										</div>
+
+										<div class="col-xs-12 col-sm-8">
+											
+											<div class="space-12"></div>
+
+											<!-- #section:pages/profile.info -->
+											<div class="profile-user-info profile-user-info-striped">
+												<div class="profile-info-row">
+													<div class="profile-info-value  width-50 aj-border-right">
+														 <div class="label label-info arrowed-in-right arrowed label-xlg">账户余额</div>
+														 <div class="shop-sum"><i>￥</i><span id="zhBal">88888.55</span></div>
+														 <div class="shop-btn">
+														 	<span class="btn btn-xs  btn-light no-hover btn-round">
+																<span class="line-height-1 bigger-170 blue"> 提现 </span>
+															</span>
+			
+															<span class="btn btn-xs  btn-yellow no-hover btn-round">
+																<span class="line-height-1 bigger-170"> 转账 </span>
+															</span>
+			
+															<span class="btn btn-xs  btn-pink no-hover btn-round">
+																<span class="line-height-1 bigger-170"> 充值 </span>
+															</span>
+														 </div>
+													</div>
+
+													<div class="profile-info-value width-50">
+														<div class="label label-info arrowed-in-right arrowed label-xlg">待结算金额</div>
+														<div class="shop-sum"><i>￥</i><span id="jsBal">88888.55</span></div>
+													</div>
+												</div>												
+											</div>
+
+											<!-- /section:pages/profile.info -->
+											<div class="space-20"></div>
+
+
+											<div class="space-6"></div>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div>
+						
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+		</div><!-- /.main-content -->
+	
+		</div><!-- /.main-container -->
+
+		<!--商戶等待打款验证-->
+		<div id="alert-wait" class="hide">
+			<div class="step-pane active">
+				<h6 class="lighter block green">尊敬的商户，您好！<br/>捷顺通将向您以下账户随机打入一笔小额金额，以便验证银行卡真实性，请关注短信或邮件信息提醒，谢谢！</h6>
+				<form class="form-horizontal" id="sample-form">
+					<!-- #section:elements.form.input-state -->
+					<div class="form-group has-warning">
+						<label for="openName" class="col-xs-12 col-sm-3 control-label no-padding-right">开户人姓名</label>
+	
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openName" readonly="readonly" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>
+	
+					<!-- /section:elements.form.input-state -->
+					<div class="form-group has-error">
+						<label for="openBank" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户银行</label>
+	
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openBank" readonly="readonly" class="width-100">
+								<i class="ace-icon fa fa-times-circle"></i>
+							</span>
+						</div>
+						
+					</div>
+	
+					<div class="form-group has-success">
+						<label for="openBankCode" class="col-xs-12 col-sm-3 control-label no-padding-right">开户银行卡号</label>
+	
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openBankCode" readonly="readonly" class="width-100">
+								<i class="ace-icon fa fa-check-circle"></i>
+							</span>
+						</div>
+						
+					</div>
+		
+				</form>					
+			</div>					
+		</div><!-- #dialog-confirm -->
+		
+		<!--商户回填金额1-2次-->
+		<div id="alert-fill" class="hide">
+			<div class="step-pane active">
+				<h6 class="lighter block green">我们已给<span id="bankName">中国工商银行</span><span id="cardCode">6225********6666</span>汇入一笔小额确认金额。您需要查询银行卡的收支明细表，正确输入这笔金额才能完成鉴权</h6>
+				<form class="form-horizontal" id="sample-form">
+					
+					<div class="form-group has-warning">
+						<label for="inputSum" class="col-xs-12 col-sm-3 control-label no-padding-right">打款金额</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="inputSum" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>							
+				</form>					
+			</div>	
+			<p class="bigger-110 bolder center grey">
+				<i class="ace-icon fa fa-hand-o-right blue bigger-120"></i>
+				<span id="payTime">您有3次输入金额的机会，若3次输错后需要更换银行卡重新发起认证</span>
+			</p>
+		</div><!-- #dialog-confirm -->
+		<!--商户回填金额3次-->
+		<div id="alert-err" class="hide">
+			<div class="step-pane active">
+				<h6 class="lighter block green center">您已3次回填打款金额错误，打款验证失败，请更换对公银行账户进行验证</h6>				
+			</div>	
+		</div><!-- #dialog-confirm -->
+		<!--更换回填金额银行卡-->
+		<div id="alert-change" class="hide">
+			<div class="step-pane active">
+		
+				<form class="form-horizontal" id="sample-form">				
+					<div class="form-group has-warning">
+						<label for="userOpenName" class="col-xs-12 col-sm-3 control-label no-padding-right">银行开户名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="userOpenName" class="width-100" readonly="readonly">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>	
+					<div class="form-group has-warning">
+						<label for="inputWarning" class="col-xs-12 col-sm-3 control-label no-padding-right">开户银行</label>
+						<div class="col-xs-12 col-sm-5">
+							<select class="form-control" id="bankList">							
+								
+								
+							</select>
+						</div>					
+					</div>
+					<div class="form-group has-warning">
+						<label for="openBranch" class="col-xs-12 col-sm-3 control-label no-padding-right">开户网点名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openBranch" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>
+					<div class="form-group has-warning">
+						<label for="openProvince" class="col-xs-12 col-sm-3 control-label no-padding-right">开户地所在省/市/自治区</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openProvince" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>
+					<div class="form-group has-warning">
+						<label for="openCity" class="col-xs-12 col-sm-3 control-label no-padding-right">开户地所在市县</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openCity" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>					
+					</div>
+					<div class="form-group has-warning">
+						<label for="openCardNo" class="col-xs-12 col-sm-3 control-label no-padding-right">银行账号</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="openCardNo" class="width-100">
+								<i class="ace-icon fa fa-leaf"></i>
+							</span>
+						</div>	
+						<div class="help-block col-xs-12 col-sm-reset inline" id="errCardTips"> </div>
+					</div>
+				</form>		
+			</div>	
+		</div><!-- #dialog-confirm -->
+		<!--鉴权失效申请-->
+		<div id="alert-fail" class="hide">
+			<div class="step-pane active">
+				<h6 class="lighter block green center">您已超过两周回填金额有效期，请重新申请发起打款验证，谢谢！</h6>				
+			</div>	
+		</div><!-- #dialog-confirm -->
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../../js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../../js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="../../js/jquery-ui.min.js"></script>
+		<script src="../../js/jquery.ui.touch-punch.min.js"></script>
+		<!-- ace scripts -->
+		<script src="../../js/ace-elements.min.js"></script>
+		<script src="../../js/ace.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/index.js"></script>
+		<!-- inline scripts related to this page -->
+		
+	</body>
+</html>
