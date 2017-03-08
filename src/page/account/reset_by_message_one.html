@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>商户平台-忘记登录密码</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../../css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../../css/ace.min.css" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css" />
+		
+		<link rel="stylesheet" href="../../css/jquery-ui.min.css" />
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="../../js/html5shiv.js"></script>
+		<script src="../../js/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/reset_by_message_one.css" />
+	</head>
+
+	<body class="login-layout light-login">
+		<div class="login-barbox">
+		   <img src="../../img/bg/bj_dengl.png" />
+		   <div class="login-barlogo"><img src="../../img/logo/bj_wenz.png" /></div>
+		</div>	
+		<div class="main-container">
+			<div class="main-content">
+				<div class="bar-cell">
+					<div class="step-cell">
+						<div class="step step-on">1</div>
+						<div class="step-line"></div>
+						<div class="step">2</div>
+						<div class="step-line"></div>
+						<div class="step">3</div>
+					</div>
+					<div class="mes-cell">
+						<div class="step-mes">验证身份</div>
+						<div class="step-blank"></div>
+						<div class="step-mes">重置登录密码</div>
+						<div class="step-blank"></div>
+						<div class="step-mes">重置成功</div>
+					</div>
+				</div>
+				<div class="check-cell">
+					<h4>您正在使用“验证短信”进行校验。</h4>
+					<div class="input-cell">
+						<div class="input-lab">手机号码：</div>
+						<input class="fill-mes" id="userPhone" type="text" placeholder="请输入手机号码" readonly="readonly" style="background: #FFFFFF !important;"/>
+						<div class="input-btn ajOn" id="sendCode">发送验证码</div>
+					</div>
+					<div class="input-cell">
+						<div class="input-lab">验证码：</div>
+						<input class="fill-mes" type="text" id="checkCode" placeholder="请输入验证码" maxlength="6"/>					
+					</div>
+					<div class="err-tips" id="checkCodeErr"></div>
+					<div class="btn-cell">
+						<button class="btns" id="nextBtn">下一步</button>
+						<button class="btns" id="pervBtn">上一步</button>
+					</div>
+				</div>
+			</div>
+			<!-- /.main-content -->
+			<div id="alertBox" class="hide">
+
+			</div>
+		
+		</div>
+		<div class="footer">
+			<div class="footer-inner">
+				<!-- #section:basics/footer -->
+				<div class="footer-content">
+					<span class="bigger-120">
+						<span class="company">捷顺金融科技技术服务有限公司</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- /.main-container -->
+		
+			
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>" + "<" + "/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../../js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(document).on('click', '.toolbar a[data-target]', function(e) {
+					e.preventDefault();
+					var target = $(this).data('target');
+					$('.widget-box.visible').removeClass('visible'); //hide others
+					$(target).addClass('visible'); //show target
+				});
+			});
+
+		</script>
+		<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+		
+		<!--加密模块-->
+		<script type="text/javascript" src="../../js/core.js"></script>
+		<script type="text/javascript" src="../../js/enc-base64.js"></script>
+		<script type="text/javascript" src="../../js/md5.js"></script>
+		<script type="text/javascript" src="../../js/num_input.js"></script>
+		<!-- 自定义 -->
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/reset_by_message_one.js"></script>
+	
+	</body>
+
+</html>

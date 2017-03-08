@@ -1,0 +1,82 @@
+.light-login{
+	background:#FFFFFF;
+}
+
+.banner-cell{
+	width:100%;
+	height:340px;
+	background:url(../img/bg/bj_dengl.png);
+	background-size:100% 100%;
+	position: relative;
+}
+.banner-cell .logo-img{	
+	width:230px;
+	height:168px;
+	position: absolute;
+	left:50%;
+	top:35%;
+	margin-left:-115px;
+}
+.banner-cell .logo-img img{
+	display: block;
+	border: 0;
+	width:100%;
+	height:100%;
+}
+
+.select-oper{
+	width:100%;
+	margin-top:60px;
+	padding:10px 0;
+}
+.select-oper .radio-cell{
+	width:420px;
+	margin:0 auto;
+}
+.select-oper .radio-cell .radio-item{
+	margin-right:20px;
+}
+.input-cell{
+	width:420px;
+	margin:0 auto;
+	font-size: 14px;
+	color:#333333;
+	padding:10px 0;
+	position: relative;
+}
+.input-cell label{
+	
+}
+.input-cell input{
+	width:260px;
+	outline: none;
+	margin:0 10px;
+	padding-left:5px;
+	font-size: 14px;
+	color:#333333;
+}
+.input-cell span{
+
+}
+
+.input-cell .mail-err{
+	color:red;
+	font-size:14px;
+	position: absolute;
+	top:15px;
+	right:-110px;
+}
+
+
+.btn-cell{
+	width:100%;
+	/*text-align: center;*/
+	padding:10px 0;
+}
+.btn-cell{
+	width:420px;
+	margin:0 auto;
+}
+.btn-cell .btns{
+	margin:0 140px 0 30px;
+}

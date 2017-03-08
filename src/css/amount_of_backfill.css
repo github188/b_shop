@@ -1,0 +1,44 @@
+/*.ui-dialog{
+	border-radius: 5px;
+}
+.ui-dialog .ui-dialog-titlebar{
+	height:50px;
+	background-color: #e3e3e3;
+	color: #666666;
+	font-size: 20px;
+}
+.ui-dialog .ui-dialog-titlebar-close{
+	display: none;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{
+	width:100%;
+	text-align: center;
+}
+.ui-dialog .ui-dialog-buttonpane{
+	background:#ffffff;
+	border:0;
+	padding: 0 20px 20px;
+}
+
+.alert-title{
+	margin:0;
+	line-height: 50px;
+}
+.alert-content{
+	padding:44px 20px;
+}
+.alert-content p{
+	color: #333333;
+	font-size:14px;
+}
+.alert-btn{
+	width:150px;
+	height:48px;
+	font-size:16px;
+	color:#FFFFFF;
+	background:#ff6f20;
+	border-radius: 5px;
+	border:0;
+	outline: none;
+	margin:0 !important;
+}*/

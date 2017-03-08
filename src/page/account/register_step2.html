@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>注册-商户平台</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../../css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../../css/ace.min.css" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css" />
+		
+		<link rel="stylesheet" href="../../css/jquery-ui.min.css" />
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="../../js/html5shiv.js"></script>
+		<script src="../../js/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/register_step2.css" />
+	</head>
+
+	<body class="login-layout light-login">
+		<div class="banner-cell">
+		   <div class="logo-img">
+		   		<img src="../../img/logo/bj_wenz.png"/>
+		   </div>
+		</div>
+		
+		<div class="step-cell">
+			<div class="ban-cell">
+				<ul class="wizard-steps">
+					<li data-target="#step1" class="complete">
+						<span class="step">1</span>
+						<span class="title">创建账户</span>
+					</li>
+
+					<li data-target="#step2" class="active">
+						<span class="step">2</span>
+						<span class="title">填写商户信息</span>
+					</li>
+
+					<li data-target="#step3">
+						<span class="step">3</span>
+						<span class="title">填写结算及支付渠道信息</span>
+					</li>
+
+					<li data-target="#step4">
+						<span class="step">4</span>
+						<span class="title">确认信息</span>
+					</li>
+					
+					<li data-target="#step4">
+						<span class="step">5</span>
+						<span class="title">注册成功</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="step-content pos-rel" id="step-container">
+				<!--步骤1-->
+				<div class="step-pane active hide" id="step1">
+					<form class="form-horizontal">
+						<!-- #section:elements.form.input-state -->
+						<div class="form-group aj">
+							<label for="inputMail" class="col-xs-12 col-sm-3 control-label no-padding-right">注册邮箱：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="block input-icon input-icon-right">
+									<input type="text" id="inputMail" class="width-100" placeholder="请输入注册邮箱">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+						</div>
+
+						<!-- /section:elements.form.input-state -->
+						<div class="form-group">
+							<label for="inputPhone" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">注册手机号：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="block input-icon input-icon-right">
+									<input type="text" id="inputPhone" class="width-100" placeholder="请输入注册手机号">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputCode" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">验证码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="block input-icon input-icon-right">
+									<input type="text" id="inputCode" class="width-100" placeholder="请输入验证码">
+									<i class="ace-icon fa code-btn ajOn" id="codeBtn">发送验证码</i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+						</div>
+
+						<div class="form-group">
+							<label for="inputPwd1" class="col-xs-12 col-sm-3 control-label no-padding-right">新登录密码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="block input-icon input-icon-right">
+									<input type="password" id="inputPwd1" class="width-100" placeholder="请输入登录密码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+							<div class="pwd-tips hide" id="loginPwdTips">
+								<p>6-20位字符</p>
+								<p>只能包含大小写字母、数字以及标点符号（除空格）</p>
+								<p>大写字母、小写字母、数字和标点符号至少包含2种</p>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="inputPwd2" class="col-xs-12 col-sm-3 control-label no-padding-right">确认密码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="block input-icon input-icon-right">
+									<input type="password" id="inputPwd2" class="width-100" placeholder="请再次输入登录密码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+							
+						</div>
+
+						<div class="form-group">
+							<label for="inputPayPwd1" class="col-xs-12 col-sm-3 control-label no-padding-right">交易密码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="password" id="inputPayPwd1" class="width-100" placeholder="请输入交易密码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+							<div class="pwd-tips hide" id="payPwdTips">
+								<p>6位数字</p>								
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputPayPwd2" class="col-xs-12 col-sm-3 control-label no-padding-right">确认交易密码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="password" id="inputPayPwd2" class="width-100" placeholder="请再次输入交易密码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+						</div>
+					</form>
+					
+					<div class="btn-cell center">
+						<button class="btn btn-app btn-info btn-sm" id="stepBtn1">下一步</button>
+					</div>
+				</div>
+				
+				<!--步骤2-->
+				<div class="step-pane active" id="step2">
+					<form class="form-horizontal" id="sample-form">
+						<div class="form-group">
+							<label for="inputCompanyName" class="col-xs-12 col-sm-3 control-label no-padding-right">企业名称：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="inputCompanyName" class="width-100" placeholder="请输入企业名称">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputCompanyShortName" class="col-xs-12 col-sm-3 control-label no-padding-right">企业简称：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="inputCompanyShortName" class="width-100" placeholder="请输入企业简称">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputCompanyType" class="col-xs-12 col-sm-3 control-label no-padding-right">企业类型：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<select id="inputCompanyType" class="width-100" placeholder="请输入企业类型">
+										<option value="">请选择您的企业类型</option>
+	                                    <option value="商城百货">商城百货</option>
+	                                    <option value="餐饮美食">餐饮美食</option>
+	                                    <option value="休闲娱乐">休闲娱乐</option>
+	                                    <option value="美容美发">美容美发</option>
+	                                    <option value="旅游景点">旅游景点</option>
+	                                    <option value="文化教育">文化教育</option>
+	                                    <option value="体育健身">体育健身</option>
+	                                    <option value="汽车服务">汽车服务</option>
+	                                    <option value="专营专卖">专营专卖</option>
+	                                    <option value="面包糕点">面包糕点</option>
+	                                    <option value="数码家电">数码家电</option>
+	                                    <option value="便利服务">便利服务</option>
+	                                    <option value="其他">其他</option>
+									</select>
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必选）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputCompanyLogo" class="col-xs-12 col-sm-3 control-label no-padding-right">企业LOGO：</label>
+							<div class="col-xs-12 col-sm-5">
+								<label class="ace-file-input ace-file-multiple">
+									<input multiple="" type="file" id="inputCompanyLogo" class="upload">								
+								</label>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="businessLicence " class="col-xs-12 col-sm-3 control-label no-padding-right">营业执照号：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="businessLicence" class="width-100" placeholder="请输入营业执照号">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="businessLicenceAdrr" class="col-xs-12 col-sm-3 control-label no-padding-right">营业执照所在地：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="businessLicenceAdrr" class="width-100" placeholder="请输入营业执照所在地">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="licenceDate" class="col-xs-12 col-sm-3 control-label no-padding-right">营业执照有效期：</label>
+							<div class="col-xs-12 col-sm-5 input-daterange">
+								<input type="text" class="input-sm col-sm-5" name="start" id="licenceDateStart" readonly="readonly">
+								<span class="col-sm-2 center">至</span>
+								<input type="text" class="input-sm col-sm-5" name="end" id="licenceDateEnd" readonly="readonly">
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+							<label>
+								<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-empty" type="checkbox" id="licenceDateBtn">
+								<span class="lbl">长期</span>
+							</label>
+						</div>
+						
+						<div class="form-group">
+							<label for="licenceImg" class="col-xs-12 col-sm-3 control-label no-padding-right">营业执照图片：</label>
+							<div class="col-xs-12 col-sm-5">
+								<label class="ace-file-input ace-file-multiple">
+									<input multiple="" type="file" id="licenceImg" class="upload">
+								</label>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必传）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="organizationCode" class="col-xs-12 col-sm-3 control-label no-padding-right">组织机构代码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="organizationCode" class="width-100" placeholder="请输入组织机构代码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for=" scopeOfBusiness " class="col-xs-12 col-sm-3 control-label no-padding-right">营业范围：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="scopeOfBusiness" class="width-100" placeholder="请输入营业范围">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="bankCardNo" class="col-xs-12 col-sm-3 control-label no-padding-right">开户银行卡号：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="bankCardNo" class="width-100" placeholder="请输入开户银行卡号">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="bankName" class="col-xs-12 col-sm-3 control-label no-padding-right">开户银行名称：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="bankName" class="width-100" placeholder="请输入开户银行名称">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="subbranchName" class="col-xs-12 col-sm-3 control-label no-padding-right">开户支行：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="subbranchName" class="width-100" placeholder="请输入开户支行">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="bankAdrr" class="col-xs-12 col-sm-3 control-label no-padding-right">开户银行所在地：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="bankAdrr" class="width-100" placeholder="请输入开户银行所在地">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="userName" class="col-xs-12 col-sm-3 control-label no-padding-right">开户人姓名：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="userName" class="width-100" placeholder="请输入开户人姓名">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="contactsName" class="col-xs-12 col-sm-3 control-label no-padding-right">联系人姓名：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="contactsName" class="width-100" placeholder="请输入联系人姓名">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="contactsPhone" class="col-xs-12 col-sm-3 control-label no-padding-right">联系人手机：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="contactsPhone" class="width-100" placeholder="请输入联系人手机">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="contactsMail" class="col-xs-12 col-sm-3 control-label no-padding-right">联系人邮箱：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="contactsMail" class="width-100" placeholder="请输入联系人邮箱">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（非必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="legalName" class="col-xs-12 col-sm-3 control-label no-padding-right">法人姓名：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="legalName" class="width-100" placeholder="请输入法人姓名">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="legalIdCode" class="col-xs-12 col-sm-3 control-label no-padding-right">法人身份证号码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="legalIdCode" class="width-100" placeholder="请输入法人身份证号码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="legalIdDate" class="col-xs-12 col-sm-3 control-label no-padding-right">法人证件有效期：</label>
+							<div class="col-xs-12 col-sm-5 input-daterange">
+								<input type="text" class="input-sm col-sm-5" name="start" id="legalIdDateStart">
+								<span class="col-sm-2 center">至</span>
+								<input type="text" class="input-sm col-sm-5" name="end" id="legalIdDateEnd">
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必选）</div>
+							<label>
+								<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-empty" type="checkbox" id="legalIdDateBtn">
+								<span class="lbl"></span>
+							</label>
+						</div>
+						
+						<div class="form-group">
+							<label for="legalIdImg" class="col-xs-12 col-sm-3 control-label no-padding-right">法人证件照片：</label>
+							<div class="col-xs-12 col-sm-5">
+								<label class="ace-file-input ace-file-multiple">
+									<input multiple="" type="file" id="legalIdImg" class="upload">
+							
+								</label>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">必传</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="commerceName" class="col-xs-12 col-sm-3 control-label no-padding-right">商务人员姓名：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="commerceName" class="width-100" placeholder="请输入商务人员姓名">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="commerceIdCode" class="col-xs-12 col-sm-3 control-label no-padding-right">商务人员身份证号码：</label>
+							<div class="col-xs-12 col-sm-5">
+								<span class="input-icon block input-icon-right">
+									<input type="text" id="commerceIdCode" class="width-100" placeholder="请输入商务人员身份证号码">
+									<i class="ace-icon fa"></i>
+								</span>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必填）</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="commerceIdDate" class="col-xs-12 col-sm-3 control-label no-padding-right">商务人员证件有效期：</label>
+							<div class="col-xs-12 col-sm-5 input-daterange">
+								<input type="text" class="input-sm col-sm-5" name="start" id="commerceIdDateStart">
+								<span class="col-sm-2 center">至</span>
+								<input type="text" class="input-sm col-sm-5" name="end" id="commerceIdDateEnd">					
+							</div>
+							
+							<div class="help-block col-xs-12 col-sm-reset inline">（必选）</div>
+							<label>
+								<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-empty" type="checkbox" id="commerceIdDateBtn">
+								<span class="lbl"></span>
+							</label>
+						</div>
+						
+						<div class="form-group">
+							<label for="commerceImg" class="col-xs-12 col-sm-3 control-label no-padding-right">商务人员证件照片：</label>
+							<div class="col-xs-12 col-sm-5">
+								<label class="ace-file-input ace-file-multiple">
+									<input multiple="" type="file" id="commerceImg" class="upload">
+									
+								</label>
+							</div>
+							<div class="help-block col-xs-12 col-sm-reset inline">（必传）</div>
+						</div>
+
+					</form>
+					
+					<div class="btn-cell center">
+						<button class="btn btn-app btn-info btn-sm" id="stepBtn2">下一步</button>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		<div id="alertBox" class="hide"></div>
+		
+		<!-- /.main-container -->
+		
+			
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>" + "<" + "/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../../js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(document).on('click', '.toolbar a[data-target]', function(e) {
+					e.preventDefault();
+					var target = $(this).data('target');
+					$('.widget-box.visible').removeClass('visible'); //hide others
+					$(target).addClass('visible'); //show target
+				});
+			});
+
+		</script>
+		<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+		<script src="../../js/ace.min.js"></script>		
+		<script src="../../js/bootstrap.js"></script>
+		<script src="../../js/ace-elements.min.js"></script>
+		
+		<!-- 时间插件 -->
+		<script src="../../js/bootstrap-datepicker.min.js"></script>
+		<!--加密模块-->
+		<script type="text/javascript" src="../../js/core.js"></script>
+		<script type="text/javascript" src="../../js/enc-base64.js"></script>
+		<script type="text/javascript" src="../../js/md5.js"></script>
+		
+		<!-- 自定义 -->
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/register_step2.js"></script>
+	
+	</body>
+
+</html>

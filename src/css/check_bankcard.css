@@ -1,0 +1,72 @@
+.table-cell{
+	padding:20px;
+}
+.add-btn{
+	display: inline-block;
+	width: 100px;
+	padding:5px;
+	font-size:14px;
+	color:#8ed4eb;
+	cursor: pointer;
+}
+.table-btn{
+	display: inline-block;
+	border:0;
+	outline: none;
+	margin:0 5px;
+	border-radius: 5px;
+	padding:5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.table-btn:hover{
+	color: #FFFFFF;
+    text-decoration: none;
+}
+.table-btn:link{
+	color: #FFFFFF;
+	border:0;
+}
+.revise-btn{
+	background:#8ed4eb;
+	color:#FFFFFF;
+}
+.authentication-btn{
+	background:#E3E3E3;
+	color:#FFFFFF;
+}
+.authentication-btn-on{
+	background:#fb994b;
+	color:#FFFFFF;
+}
+.delete-btn{
+	background:#f00;
+	color:#FFFFFF;
+}
+
+.alert-btn{
+	width:100px;
+	margin:0 10px !important;
+}
+
+.auth-cell{
+	width:400px;
+	margin: 0 auto;
+	padding:10px 0;
+}
+.auth-cell span{
+	display: inline-block;
+	font-size: 14px;
+	color:#878787;
+	line-height: 1;
+	width:120px;
+	text-align: right;
+}
+.auth-cell input{
+	width: 200px;
+	vertical-align: middle;
+	font-size: 14px;
+	color:#000000;
+	border: 0;
+	outline: none;
+}

@@ -1,0 +1,148 @@
+.main-container:before{
+	background:#f4f4f4;
+}
+.none{
+	display:none;
+}
+.noline{
+	border:0 !important;
+}
+.menu-box{
+	width:100%;
+	overflow:hidden;
+}
+.menu-nav{
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow:hidden;
+	background:#ff9038;
+}
+.menu-nav li{
+	width:240px;
+	height:74px;
+	line-height:74px;
+	float:left;
+	font-size:18px;
+	text-align:center;
+	color:#fff;
+	border-right:1px solid #feac6b;
+	cursor:pointer;
+}
+.menu-nav li.menu-nav-pick{
+	background:#ff6f41;
+}
+.menu-area{
+	width:100%;
+	overflow:hidden;
+	background:#f4f4f4;
+}
+.menu-area .menu-showbox{
+	width:98%;
+	overflow:hidden;
+	margin:auto;
+	margin-top:10px;
+	background:#fff;
+}
+.company-logo{
+	width:60px;
+	height:60px;
+	float:left;
+	margin:37px 0px 30px 40px;
+	border-radius:30px;
+	overflow:hidden;
+}
+.company-logo img{
+	width:100%;
+	height:auto;
+	display:inline-block;
+}
+.company-name{
+	margin:37px 0px 30px 18px;
+	overflow:hidden;
+	float:left;
+}
+.company-name h3{
+	font-size:26px;
+	color:#333;
+	padding-top:5px;
+}
+.company-name p{
+	font-size:14px;
+	color:#333;
+	padding-top:6px;
+}
+.menu-showcom{
+	padding-bottom:60px;
+}
+.company-base{
+	width:42%;
+	overflow:hidden;
+	float:left;
+	margin:45px 0px 0px 120px;
+	border-right:1px solid #e3e3e3;
+}
+.company-base p{
+	padding-top:9px;
+}
+.company-images{
+	padding-top:48px;
+}
+.company-images>li{
+	text-align:center;
+	border:0;
+	margin-right:5%;
+}
+.company-images>li a{
+	width:auto;
+	height:120px;
+	display: block;
+	overflow:hidden;
+}
+.company-acct{
+	overflow:hidden;
+	float:left;
+	margin:35px 0px 0px 10%;
+}
+.company-acct p{
+	padding-top:9px;
+}
+.company-settle{
+	width:42%;
+	overflow:hidden;
+	float:left;
+	margin:35px 0px 0px 120px;
+}
+.company-settle p{
+	padding-top:9px;
+}
+.company-tit{
+	margin-top:22px;
+	height:60px;
+}
+.company-tit em{
+	width:6px;
+	height:18px;
+	display:inline-block;
+	background:#ff6f41;
+	margin-right:18px;
+	vertical-align: middle;
+}
+.company-tit span{
+	height:22px;
+	display:inline-block;
+	color:#333;
+	font-size:20px;
+	font-weight:bold;
+	vertical-align: middle;
+}
+.company-itembox{
+	width:100%;
+	overflow:hidden;
+	border-right:1px solid #e3e3e3;
+}
+.company-paypro{
+	width:100%;
+	overflow:hidden;
+	padding-bottom:30px;
+}

@@ -1,6 +1,5 @@
 .widget-body{
 	width:700px;
-	height:400px;
 	margin:0 auto;
 	border:1px solid #D1D1D1;
 	font-size:18px;
@@ -17,6 +16,7 @@
 }
 .input-cell .input-tips{
 	width:20%;
+	text-align: right;
 	float: left;
 }
 .input-cell .err-tips{
@@ -39,3 +39,4 @@
 	width:80%;
 	
 }
+

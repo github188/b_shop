@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>企业基本信息</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<title>首页-商户平台</title>
 
-		<meta name="description" content="top menu &amp; navigation" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="description" content="overview &amp; stats">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/font-awesome.min.css">
 
 		<!-- page specific plugin styles -->
 		<link rel="stylesheet" href="../../css/colorbox.css" />
+
 		<!-- text fonts -->
-		<link rel="stylesheet" href="../../css/ace-fonts.css" />
+		<link rel="stylesheet" href="../../css/ace-fonts.css">
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style" />
+		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style">
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="../../css/ace-skins.min.css" />
-		<link rel="stylesheet" href="../../css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../../css/ace-skins.min.css">
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css">
 
 		<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
-
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/base_info.css" />
 		<!-- ace settings handler -->
 		<script src="../../js/ace-extra.min.js"></script>
 
@@ -42,872 +43,244 @@
 		<script src="../../js/html5shiv.min.js"></script>
 		<script src="../../js/respond.min.js"></script>
 		<![endif]-->
-	</head>
-
+	<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 	<body class="no-skin">
 		<!-- #section:basics/navbar.layout -->
-		<div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+		<div id="navbar" class="navbar navbar-default">
 			<script type="text/javascript">
-				try {
-					ace.settings.check('navbar', 'fixed')
-				} catch(e) {}
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
 			</script>
 
 			<div class="navbar-container" id="navbar-container">
+
+				<!-- 图标 logo -->
 				<div class="navbar-header pull-left">
 					<!-- #section:basics/navbar.layout.brand -->
-					<a href="#" class="navbar-brand">
+					<a href="index.html" class="navbar-brand">
 						<small>
-							<i class="fa fa-leaf"></i>
-							B门户
+							<img src="../../img/logo/logo.png"/>
+							<span class="platform-name">商户平台</span>
 						</small>
 					</a>
 
-					<!-- /section:basics/navbar.layout.brand -->
-
-					<!-- #section:basics/navbar.toggle -->
-					<button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
-						<span class="sr-only">Toggle user menu</span>
-
-						<img src="../../images/avatars/user.jpg" alt="Jason's Photo" />
-					</button>
-
-					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".sidebar">
-						<span class="sr-only">Toggle sidebar</span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-					</button>
-
-					<!-- /section:basics/navbar.toggle -->
 				</div>
 
 				<!-- #section:basics/navbar.dropdown -->
-				<div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-
-						<!-- #section:basics/navbar.user_menu -->
-						<li class="light-blue user-min">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../../images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-								<i class="ace-icon fa fa-caret-down"></i>
-							</a>
-
-							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i> Settings
-									</a>
-								</li>
-
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i> Profile
-									</a>
-								</li>
-
-								<li class="divider"></li>
-
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i> Logout
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<!-- /section:basics/navbar.user_menu -->
+						<li class="top-username">您好，小气鬼</li>
+						<li class="logout">退出</li>
 					</ul>
 				</div>
 
 				<!-- /section:basics/navbar.dropdown -->
-			</div>
-			<!-- /.navbar-container -->
+			</div><!-- /.navbar-container -->
 		</div>
 
 		<!-- /section:basics/navbar.layout -->
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
-				try {
-					ace.settings.check('main-container', 'fixed')
-				} catch(e) {}
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
 			</script>
 
-			<!-- #section:basics/sidebar.horizontal -->
-			<div id="sidebar" class="sidebar h-sidebar navbar-collapse collapse">
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar responsive">
 				<script type="text/javascript">
-					try {
-						ace.settings.check('sidebar', 'fixed')
-					} catch(e) {}
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<!-- #section:basics/sidebar.layout.shortcuts -->
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-
-						<!-- /section:basics/sidebar.layout.shortcuts -->
-					</div>
-
-					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
-
-						<span class="btn btn-info"></span>
-
-						<span class="btn btn-warning"></span>
-
-						<span class="btn btn-danger"></span>
-					</div>
-				</div>
-				<!-- /.sidebar-shortcuts -->
-
-				<ul class="nav nav-list">
-					<li class="hover">
-						<a href="index.html">
-							<i class="menu-icon fa fa-tachometer"></i>
-							<span class="menu-text"> Dashboard </span>
+				<ul class="nav nav-list" style="top: 0px;" id="menu">
+					<li class="hsub nav-li active">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon sh-icon"></i>
+							<span class="menu-text"> 我的商户 </span>
 						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="active open hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text"> UI &amp; Elements </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="active open hover">
-								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i> Layouts
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
-
-								<b class="arrow"></b>
-
-								<ul class="submenu">
-									<li class="active hover">
-										<a href="top-menu.html">
-											<i class="menu-icon fa fa-caret-right"></i> Top Menu
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="hover">
-										<a href="mobile-menu-1.html">
-											<i class="menu-icon fa fa-caret-right"></i> Default Mobile Menu
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="hover">
-										<a href="mobile-menu-2.html">
-											<i class="menu-icon fa fa-caret-right"></i> Mobile Menu 2
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="hover">
-										<a href="mobile-menu-3.html">
-											<i class="menu-icon fa fa-caret-right"></i> Mobile Menu 3
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-								</ul>
-							</li>
-
-							<li class="hover">
-								<a href="typography.html">
-									<i class="menu-icon fa fa-caret-right"></i> Typography
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="elements.html">
-									<i class="menu-icon fa fa-caret-right"></i> Elements
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="buttons.html">
-									<i class="menu-icon fa fa-caret-right"></i> Buttons &amp; Icons
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="treeview.html">
-									<i class="menu-icon fa fa-caret-right"></i> Treeview
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="jquery-ui.html">
-									<i class="menu-icon fa fa-caret-right"></i> jQuery UI
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="nestable-list.html">
-									<i class="menu-icon fa fa-caret-right"></i> Nestable Lists
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i> Three Level Menu
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
-
-								<b class="arrow"></b>
-
-								<ul class="submenu">
-									<li class="hover">
-										<a href="#">
-											<i class="menu-icon fa fa-leaf green"></i> Item #1
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="hover">
-										<a href="#" class="dropdown-toggle">
-											<i class="menu-icon fa fa-pencil orange"></i> 4th level
-											<b class="arrow fa fa-angle-down"></b>
-										</a>
-
-										<b class="arrow"></b>
-
-										<ul class="submenu">
-											<li class="hover">
-												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i> Add Product
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="hover">
-												<a href="#">
-													<i class="menu-icon fa fa-eye pink"></i> View Products
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-										</ul>
-									</li>
-								</ul>
+						<ul class="submenu" id="shMenu">
+							<li class="nav-li menu-on">
+								<a href="javascript:void(0)" class="second-menu">基本信息</a>
 							</li>
 						</ul>
 					</li>
 
-					<li class="hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Tables </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="hover">
-								<a href="tables.html">
-									<i class="menu-icon fa fa-caret-right"></i> Simple &amp; Dynamic
-								</a>
-
-								<b class="arrow"></b>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon jy-icon"></i>
+							<span class="menu-text">交易管理</span>
+						</a>						
+						<ul class="submenu" id="jyMenu">
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">交易记录</a>
 							</li>
+						</ul>
+						
+					</li>
 
-							<li class="hover">
-								<a href="jqgrid.html">
-									<i class="menu-icon fa fa-caret-right"></i> jqGrid plugin
-								</a>
-
-								<b class="arrow"></b>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon js-icon"></i>
+							<span class="menu-text">结算管理 </span>
+						</a>
+						<ul class="submenu" id="jsMenu">
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">已结算查询</a>
+							</li>
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">结算详情</a>
 							</li>
 						</ul>
 					</li>
 
-					<li class="hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text"> Forms </span>
-
-							<b class="arrow fa fa-angle-down"></b>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon zl-icon"></i>
+							<span class="menu-text"> 商户资料管理 </span>
 						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="hover">
-								<a href="form-elements.html">
-									<i class="menu-icon fa fa-caret-right"></i> Form Elements
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="form-wizard.html">
-									<i class="menu-icon fa fa-caret-right"></i> Wizard &amp; Validation
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="wysiwyg.html">
-									<i class="menu-icon fa fa-caret-right"></i> Wysiwyg &amp; Markdown
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="dropzone.html">
-									<i class="menu-icon fa fa-caret-right"></i> Dropzone File Upload
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
 					</li>
 
-					<li class="hover">
-						<a href="widgets.html">
-							<i class="menu-icon fa fa-list-alt"></i>
-							<span class="menu-text"> Widgets </span>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)">
+							<i class="icon js-icon"></i>
+							<span class="menu-text"> 操作员管理 </span>
 						</a>
-
-						<b class="arrow"></b>
 					</li>
-
-					<li class="hover">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								Calendar
-
-								<!-- #section:basics/sidebar.layout.badge -->
-								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-
-							<!-- /section:basics/sidebar.layout.badge -->
-							</span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="hover">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
-							<span class="menu-text"> Gallery </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
-							<span class="menu-text"> More Pages </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="hover">
-								<a href="profile.html">
-									<i class="menu-icon fa fa-caret-right"></i> User Profile
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="inbox.html">
-									<i class="menu-icon fa fa-caret-right"></i> Inbox
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="pricing.html">
-									<i class="menu-icon fa fa-caret-right"></i> Pricing Tables
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="invoice.html">
-									<i class="menu-icon fa fa-caret-right"></i> Invoice
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="timeline.html">
-									<i class="menu-icon fa fa-caret-right"></i> Timeline
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="email.html">
-									<i class="menu-icon fa fa-caret-right"></i> Email Templates
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="login.html">
-									<i class="menu-icon fa fa-caret-right"></i> Login &amp; Register
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					<li class="hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>
-
-							<span class="menu-text">
-								Other Pages
-
-								<!-- #section:basics/sidebar.layout.badge -->
-								<span class="badge badge-primary">5</span>
-
-							<!-- /section:basics/sidebar.layout.badge -->
-							</span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="hover">
-								<a href="faq.html">
-									<i class="menu-icon fa fa-caret-right"></i> FAQ
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="error-404.html">
-									<i class="menu-icon fa fa-caret-right"></i> Error 404
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="error-500.html">
-									<i class="menu-icon fa fa-caret-right"></i> Error 500
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="grid.html">
-									<i class="menu-icon fa fa-caret-right"></i> Grid
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="blank.html">
-									<i class="menu-icon fa fa-caret-right"></i> Blank Page
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<!-- /.nav-list -->
-
-				<!-- #section:basics/sidebar.layout.minimize -->
-				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-				</div>
+					
+				</ul><!-- /.nav-list -->
 
 				<!-- /section:basics/sidebar.layout.minimize -->
 				<script type="text/javascript">
-					try {
-						ace.settings.check('sidebar', 'collapsed')
-					} catch(e) {}
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 				</script>
 			</div>
 
-			<!-- /section:basics/sidebar.horizontal -->
+			<!-- /section:basics/sidebar -->
 			<div class="main-content">
-				<div class="page-content">
-					<div class="page-content-area">
-						<div class="page-header">
-							<h1>
-								我的商户 > 基本信息
-								<!--<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>
-									top menu &amp; navigation
-								</small>-->
-							</h1>
-						</div>
-						<!-- /.page-header -->
-
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="tabbable">
-									<!-- #section:pages/faq -->
-									<ul class="nav nav-tabs padding-18 tab-size-bigger" id="myTab">
-										<li class="active">
-											<a data-toggle="tab" href="#faq-tab-1">
-												<i class="blue ace-icon fa fa-question-circle bigger-120"></i> 企业信息
-											</a>
-										</li>
-										<li>
-											<a data-toggle="tab" href="#faq-tab-2">
-												<i class="green ace-icon fa fa-user bigger-120"></i> 法人信息
-											</a>
-										</li>
-										<li>
-											<a data-toggle="tab" href="#faq-tab-3">
-												<i class="orange ace-icon fa fa-credit-card bigger-120"></i> 商务人员信息
-											</a>
-										</li>
-										<li>
-											<a data-toggle="tab" href="#faq-tab-4">
-												<i class="purple ace-icon fa fa-magic bigger-120"></i> 结算及支付产品信息
-											</a>
-										</li>
-										<!-- /.dropdown -->
-									</ul>
-
-									<!-- /section:pages/faq -->
-									<div class="tab-content no-border padding-24">
-										<div id="faq-tab-1" class="tab-pane fade in active">
-											<div class="form-horizontal">
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 企业名称 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-companyname" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 企业简称 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-companyshortName" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 企业类型 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-companytype" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 企业LOGO </label>
-													<div class="col-sm-9">
-														<ul id="jsjk-companylogo" class="ace-thumbnails clearfix"></ul>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 营业执照号 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-busLicenceno" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 营业执照所在地 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-busLicenceaddr" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 营业执照有效期 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-busLicencedate" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 营业执照图片 </label>
-													<div class="col-sm-9">
-														<ul id="jsjk-companylicence" class="ace-thumbnails clearfix"></ul>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 组织机构代码 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-agencycode" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 营业范围 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-businessrange" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 开户银行号 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-bankcardno" class="col-sm-5 jsjk-bankselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 开户银行 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-bankname" class="col-sm-5 jsjk-bankselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 开户支行 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-openbranbank" class="col-sm-5 jsjk-bankselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 开户银行所在地 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-bankcity" class="col-sm-5 jsjk-bankselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 开户人姓名 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-openname" class="col-sm-5 jsjk-bankselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 联系人姓名 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-contactname" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 联系人手机 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-contacttel" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 联系人邮箱 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-contactemail" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="faq-tab-2" class="tab-pane fade">
-											<div class="form-horizontal">
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 法人姓名 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-corporatename" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 法人身份证号码 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-corporatecardno" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 法人证件有效期 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-corporatedate" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 法人证件图片 </label>
-													<div class="col-sm-9">
-														<ul id="jsjk-corporateident" class="ace-thumbnails clearfix"></ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="faq-tab-3" class="tab-pane fade">
-											<div class="form-horizontal">
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 商务人员姓名 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-buspersonname" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 商务人员身份证号码 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-buspersoncode" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 商务人员证件有效期 </label>
-													<div class="col-sm-9">
-														<input type="text" id="jsjk-buspersondate" placeholder="正在加载..." readonly="readonly" class="jsjk-initval col-xs-10 col-sm-5" />
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 商务人员证件图片 </label>
-													<div class="col-sm-9">
-														<ul id="jsjk-buspersonident" class="ace-thumbnails clearfix"></ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="faq-tab-4" class="tab-pane fade">
-											<div class="form-horizontal">
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算类型 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-settletype" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算周期 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-settlecycle" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算费率 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-settlerate" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算联系人姓名</label>
-													<div class="col-sm-9">
-														<select id="jsjk-settlename" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算联系人手机</label>
-													<div class="col-sm-9">
-														<select id="jsjk-settletel" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label no-padding-right"> 结算联系人邮箱 </label>
-													<div class="col-sm-9">
-														<select id="jsjk-settleemail" class="col-sm-5 jsjk-settleselect" style="padding-left:0px;"></select>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- PAGE CONTENT ENDS -->
+				<div class="menu-box">
+					<ul id="shop-menulist" class="menu-nav">
+						<li class="menu-nav-pick">企业信息</li>
+						<li>法人信息</li>
+						<li>商务人员信息</li>
+						<li>结算及支付产品信息</li>
+					</ul>
+					<div class="menu-area menu-content">
+						<div class="menu-showbox">
+							<div id="jsjk-comlogo" class="company-logo"></div>
+							<div class="company-name">
+								<h3 id="jsjk-companyname"></h3>
+								<p>企业简称：<span id="jsjk-companyshortName"></span></p>
 							</div>
-							<!-- /.col -->
 						</div>
-						<!-- /.row -->
+						<div class="menu-showbox menu-showcom">
+						  <div class="company-base">
+						  	<p>企业类型：<span id="jsjk-companytype"></span></p>
+						  	<p>营业执照号：<span id="jsjk-busLicenceno"></span></p>
+						  	<p>营业执照所在地：<span id="jsjk-busLicenceaddr"></span></p>
+						  	<p>营业执照有效期：<span id="jsjk-busLicencedate"></span></p>
+						  	<p>组织机构代码：<span id="jsjk-agencycode"></span></p>
+						  	<p>营业范围：<span id="jsjk-businessrange"></span></p>
+						  	<ul id="jsjk-companylicence" class="ace-thumbnails clearfix company-images"></ul>
+						  </div>
+						  <div class="company-acct">
+						  	<p>开户银行号：<span id="jsjk-bankcardno"></span></p>
+						  	<p>开户银行：<span id="jsjk-bankname"></span></p>
+						  	<p>开户支行：<span id="jsjk-openbranbank"></span></p>
+						  	<p>开户银行所在地：<span id="jsjk-bankcity"></span></p>
+						  	<p>开户人姓名：<span id="jsjk-openname"></span></p>
+						  	<p>联系人姓名：<span id="jsjk-contactname"></span></p>
+						  	<p>联系人手机：<span id="jsjk-contacttel"></span></p>
+						  	<p>联系人邮箱：<span id="jsjk-contactemail"></span></p>
+						  </div>
+						</div>
 					</div>
-					<!-- /.page-content-area -->
+					<div class="menu-area menu-content none">
+						<div class="menu-showbox">
+							<div class="company-logo"><img src="../../img/icon/icon_far.png" /></div>
+							<div class="company-name">
+								<h3 id="jsjk-corporatename"></h3>
+								<p>法人姓名</p>
+							</div>
+						</div>
+						<div class="menu-showbox menu-showcom">
+						  <div class="company-base noline">
+						  	<p>证件号码：<span id="jsjk-corporatecardno"></span></p>
+						  	<p>证件有效期：<span id="jsjk-corporatedate"></span></p>
+						  	<ul id="jsjk-corporateident" class="ace-thumbnails clearfix company-images"></ul>
+						  </div>
+						</div>
+					</div>
+					<div class="menu-area menu-content none">
+						<div class="menu-showbox">
+							<div class="company-logo"><img src="../../img/icon/icon_shangw.png" /></div>
+							<div class="company-name">
+								<h3 id="jsjk-buspersonname"></h3>
+								<p>商务人员</p>
+							</div>
+						</div>
+						<div class="menu-showbox menu-showcom">
+						  <div class="company-base noline">
+						  	<p>证件号码：<span id="jsjk-buspersoncode"></span></p>
+						  	<p>证件有效期：<span id="jsjk-buspersondate"></span></p>
+						  	<ul id="jsjk-buspersonident" class="ace-thumbnails clearfix company-images"></ul>
+						  </div>
+						</div>
+					</div>
+					<div class="menu-area menu-content none">
+						<div class="menu-showbox menu-showcom">
+						  <div class="company-settle">
+						  	<h2 class="company-tit"><em></em><span>结算信息</span></h2>
+						  	<div class="company-itembox">
+							  	<p>结算方式：<span id="jsjk-settletype"></span></p>
+							  	<p>结算类型：<span id="jsjk-feeinout"></span></p>
+							  	<p>结算周期：<span id="jsjk-settlecycle"></span></p>
+							  	<p>结算费率：<span id="jsjk-settlerate"></span></p>
+							  	<p>分润方商户名称：<span id="jsjk-feemerchantname"></span></p>
+							  	<p>分润方商户号：<span id="jsjk-feemerchantid"></span></p>
+							  	<p>分润方比率：<span id="jsjk-feerate"></span></p>
+							  	<p>联系人姓名：<span id="jsjk-settlename"></span></p>
+							  	<p>联系人手机：<span id="jsjk-settletel"></span></p>
+							  	<p>联系人邮箱：<span id="jsjk-settleemail"></span></p>
+						  	</div>
+						  </div>
+						  <div class="company-acct">
+						  	<h2 class="company-tit"><em></em><span>商户收单支付产品管理</span></h2>
+						  	<div class="company-paypro">
+							  	<p>支付类型：余额</p>
+							  	<p>签约时间：2016-05-12</p>
+							  	<p>解约时间：2016-12-30</p>
+							</div>
+							<div class="company-paypro">
+							  	<p>支付类型：借记卡（快捷）</p>
+							  	<p>签约时间：2016-07-19</p>
+							  	<p>解约时间：2017-06-23</p>
+						    </div>
+							<div class="company-paypro">
+							  	<p>支付类型：预付卡</p>
+							  	<p>签约时间：2016-09-16</p>
+							  	<p>解约时间：2016-11-09</p>
+						    </div>
+						  </div>
+					</div>
 				</div>
-				<!-- /.page-content -->
-			</div>
-			<!-- /.main-content -->
+			  </div>
+			</div><!-- /.main-content -->
 
 			<div class="footer">
 				<div class="footer-inner">
 					<!-- #section:basics/footer -->
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span> Application &copy; 2013-2014
-						</span>
-
-						&nbsp; &nbsp;
-						<span class="action-buttons">
-							<a href="#">
-								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
+							<span class="company">捷顺金融科技技术服务有限公司</span>
 						</span>
 					</div>
-
-					<!-- /section:basics/footer -->
 				</div>
 			</div>
-
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div>
-		<!-- /.main-container -->
+		</div><!-- /.main-container -->
 
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../../js/jquery.min.js'>" + "<" + "/script>");
-		</script>
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>"+"<"+"/script>");
+		</script><script src="../../js/jquery.min.js"></script>
 
 		<!-- <![endif]-->
 
@@ -917,22 +290,37 @@
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 		<script src="../../js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="../../js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="../../js/jquery.ui.touch-punch.min.js"></script>
 
 		<!-- ace scripts -->
 		<script src="../../js/ace-elements.min.js"></script>
 		<script src="../../js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
+		<script type="text/javascript" src="../../js/public.js"></script>
+		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
 
+
+		<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+		
+		<!-- page specific plugin scripts -->
+        <script type="text/javascript" src="../../js/jquery.colorbox-min.js"></script>
+		
 		<!-- 自定义 -->
 		<script type="text/javascript" src="../../js/common.js"></script>
 		<script type="text/javascript" src="../../js/base_info.js"></script>
-		<script type="text/javascript" src="../../js/jquery.colorbox-min.js"></script>
-	</body>
+	
 
+<div class="tooltip top in" style="display: none;"><div class="tooltip-inner"></div></div>
+	</body>
 </html>

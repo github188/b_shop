@@ -31,7 +31,7 @@
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
-
+		<link rel="stylesheet" href="../../css/aj_public.css" />
 		<!-- ace settings handler -->
 		<script src="../../js/ace-extra.min.js"></script>
 
@@ -53,33 +53,13 @@
 			<div class="navbar-container" id="navbar-container">
 				<div class="navbar-header pull-left">
 					<!-- #section:basics/navbar.layout.brand -->
-					<a href="#" class="navbar-brand">
-						<small>
-							<i class="fa fa-leaf"></i>
-							B门户
+					<a href="index.html" class="navbar-brand">
+						<small class="aj-logo">
+							<img src="../../img/logo/top_logo.png"/>
+							商户平台
 						</small>
 					</a>
 
-					<!-- /section:basics/navbar.layout.brand -->
-
-					<!-- #section:basics/navbar.toggle -->
-					<button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
-						<span class="sr-only">Toggle user menu</span>
-
-						<img src="../../images/avatars/user.jpg" alt="Jason's Photo" />
-					</button>
-
-					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".sidebar">
-						<span class="sr-only">Toggle sidebar</span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-					</button>
-
-					<!-- /section:basics/navbar.toggle -->
 				</div>
 
 				<!-- #section:basics/navbar.dropdown -->
@@ -91,7 +71,7 @@
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="../../images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
-									<small>Welcome,</small>
+									<small>欢迎,</small>
 									Jason
 								</span>
 
@@ -116,15 +96,13 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i>
-										Logout
+									<a href="../home/login.html">
+										<i class="ace-icon fa fa-power-off"></i>Logout
+										
 									</a>
 								</li>
 							</ul>
 						</li>
-
-						<!-- /section:basics/navbar.user_menu -->
 					</ul>
 				</div>
 
@@ -152,37 +130,70 @@
 
 									<div class="space-6"></div>
 									
-									<div class="input-cell clear">
-										<div class="input-tips">商户号：</div>
-										<div class="input-content">
-											<span class="block input-icon input-icon-right">
-												<input id="shopId" type="text" readonly="readonly" class="form-control" placeholder="Username">
-												<i class="ace-icon fa fa-user"></i>
-											</span>
+
+									
+									<form class="form-horizontal" id="sample-form">
+
+										<div class="form-group has-info">
+											<label for="shopId" class="col-xs-12 col-sm-3 control-label no-padding-right">商户号</label>
+											<div class="col-xs-12 col-sm-8">
+												<span class="block input-icon input-icon-right">
+													<input type="text" id="shopId" class="width-100" readonly="readonly">
+													<i class="ace-icon fa fa-user"></i>
+												</span>
+											</div>
+											<div class="help-block col-xs-12 col-sm-reset inline"></div>
 										</div>
-									</div>
-																		
-									<div class="input-cell clear">
-										<div class="input-tips">新的登陆密码：</div>
-										<div class="input-content">
-											<span class="block input-icon input-icon-right">
-												<input id="firstPwd" type="password" class="form-control" placeholder="Password">
-												<i class="ace-icon fa fa-lock"></i>
-											</span>
-											<div class="tips">密码6-20位,必须包含字母和数字，字母区分大小写</div>
+										<div class="form-group has-info">
+											<label for="firstPwd" class="col-xs-12 col-sm-3 control-label no-padding-right">新登陆密码</label>
+
+											<div class="col-xs-12 col-sm-8">
+												<span class="block input-icon input-icon-right">
+													<input type="password" id="firstPwd" class="width-100" maxlength="20">
+													<i class="ace-icon fa fa-lock"></i>
+												</span>
+												<span id="errFirstTips" class="blue">密码6-20位,必须包含字母和数字，字母区分大小写</span>
+											</div>
+											<div class="help-block col-xs-12 col-sm-reset inline"></div>
 										</div>
-									</div>
-																	
-									<div class="input-cell clear">
-										<div class="input-tips">确认新密码：</div>
-										<div class="input-content">
-											<span class="block input-icon input-icon-right">
-												<input id="secondPwd" type="password" class="form-control" placeholder="Password">
-												<i class="ace-icon fa fa-lock"></i>
-											</span>
-											<div id="errTips" class="tips">密码6-20位,必须包含字母和数字，字母区分大小写</div>
+
+										<div class="form-group has-info">
+											<label for="secondPwd" class="col-xs-12 col-sm-3 control-label no-padding-right">确认登陆密码</label>
+											<div class="col-xs-12 col-sm-8">
+												<span class="block input-icon input-icon-right">
+													<input type="password" id="secondPwd" class="width-100" maxlength="20">
+													<i class="ace-icon fa fa-lock"></i>
+												</span>
+												<span id="errSecondTips" class="blue">密码6-20位,必须包含字母和数字，字母区分大小写</span>
+											</div>
+											<div class="help-block col-xs-12 col-sm-reset inline"></div>
 										</div>
-									</div>	
+
+										<div class="form-group has-info">
+											<label for="payFirstPwd" class="col-xs-12 col-sm-3 control-label no-padding-right">支付密码</label>
+
+											<div class="col-xs-12 col-sm-8">
+												<span class="block input-icon input-icon-right">
+													<input type="password" id="payFirstPwd" class="width-100" maxlength="6">
+													<i class="ace-icon fa fa-lock"></i>
+												</span>
+												<span class="blue">密码应为6位数字</span>
+											</div>
+											<div class="help-block col-xs-12 col-sm-reset inline"></div>
+										</div>
+
+										<div class="form-group has-info">
+											<label for="paySecondPwd" class="col-xs-12 col-sm-3 control-label no-padding-right">确认支付密码</label>
+											<div class="col-xs-12 col-sm-8">
+												<span class="input-icon block input-icon-right">
+													<input type="password" id="paySecondPwd" class="width-100" maxlength="6">
+													<i class="ace-icon fa fa-lock"></i>
+												</span>
+												<span class="blue">密码应为6位数字</span>
+											</div>
+											<div class="help-block col-xs-12 col-sm-reset inline red"></div>
+										</div>
+									</form>
 									
 									<div class="btn-cell">
 										<div id="subBtn" class="btn">确认</div>
@@ -196,6 +207,22 @@
 					</div><!-- /.page-content-area -->
 				</div><!-- /.page-content -->
 			</div><!-- /.main-content -->
+			
+			<div class="footer">
+				<div class="footer-inner">
+					<!-- #section:basics/footer -->
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">捷顺金科有限公司版权所有</span>
+
+						</span>
+					</div>
+
+					<!-- /section:basics/footer -->
+				</div>
+			</div>
+
+		
 		</div><!-- /.main-container -->
 		
 		<!-- basic scripts -->
@@ -218,10 +245,16 @@
 		<script src="../../js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-
+		<script src="../../js/num_input.js"></script>
 		<!-- ace scripts -->
 		<script src="../../js/ace-elements.min.js"></script>
 		<script src="../../js/ace.min.js"></script>
+		
+		<!--加密模块-->
+		<script type="text/javascript" src="../../js/core.js"></script>
+		<script type="text/javascript" src="../../js/enc-base64.js"></script>
+		<script type="text/javascript" src="../../js/md5.js"></script>
+		
 		<script src="../../js/common.js"></script>
 		<script src="../../js/reset_pwd.js"></script>
 		<!-- inline scripts related to this page -->

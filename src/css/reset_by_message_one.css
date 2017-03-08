@@ -1,0 +1,156 @@
+.keep-left{
+	float:left;
+}
+.keep-right{
+	float:right;
+}
+.light-login{
+	background: #FFFFFF;
+}
+.login-main{
+	width:100%;
+	overflow:hidden;
+}
+.login-barbox{
+	width:100%;
+	min-height:340px;
+	overflow:hidden;
+	position:relative;
+}
+.login-barbox img{
+	display:inline-block;
+}
+.login-barbox .login-barlogo{
+	width:230px;
+	overflow:hidden;
+	position:absolute;
+	top:93px;
+	left:50%;
+	margin-left:-115px;
+}
+.login-barbox .login-barlogo img{
+	width:100%;
+	height:auto;
+	display:inline-block;
+}
+
+.bar-cell{
+	width: 800px;
+	margin: 0 auto;
+	padding-top:40px;
+}
+.bar-cell .step-cell{
+	text-align: center;
+}
+.bar-cell .step-cell .step{
+	display: inline-block;
+	width: 100px;
+	height:100px;
+	line-height: 100px;
+	border-radius:50% ;
+	font-size: 20px;
+	color: #333333;
+	font-weight: bold;
+	background:#D1D1D1;
+	text-align: center;
+	vertical-align: middle;
+}
+.bar-cell .step-cell .step-on{
+	background:#6abbd6;
+}
+.bar-cell .step-cell .step-line{
+	display: inline-block;
+	width: 200px;
+	height:1px;
+	background: #333333;
+	vertical-align: middle;
+}
+.bar-cell .mes-cell{
+	text-align: center;
+	padding:10px 0;
+}
+.bar-cell .mes-cell .step-mes{
+	display: inline-block;
+	width: 100px;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+}
+.bar-cell .mes-cell .step-blank{
+	display: inline-block;
+	width: 200px;
+	height:1px;	
+	vertical-align: middle;
+}
+
+.check-cell{
+	width:600px;
+	margin: 0 auto;
+	padding:30px 0;
+}
+.check-cell h4{
+	width:400px;
+	margin: 0 auto 20px;
+	color: #6abbd6;
+	font-size: 14px;
+}
+.check-cell .err-tips{
+	width:400px;
+	margin: 10px auto;
+	font-size: 14px;
+	color: #FF6F41;
+}
+.check-cell .input-cell{
+	position: relative;
+	padding:10px 0;
+	width:400px;
+	margin: 0 auto;
+	border-bottom: 1px solid #D1D1D1;
+}
+.check-cell .input-cell .input-lab{
+	display: inline-block;
+	width:80px;
+	vertical-align: middle;
+}
+.check-cell .input-cell .fill-mes{
+	border: 0;
+	outline: none;
+	color:#333333;
+	font-size: 14px;
+	width:200px;
+	padding-left:10px;
+	vertical-align: middle;
+}
+.check-cell .input-cell .input-btn{
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+	outline: none;
+	color:#333333;
+	font-size: 14px;
+	width:100px;
+	border-radius: 5px;
+	cursor: pointer;
+	background:#6ABBD6;
+	text-align: center;
+	line-height: 30px;
+}
+
+.check-cell .btn-cell{
+	text-align: center;
+	padding: 20px 0;
+}
+.check-cell .btn-cell .btns{
+	border:0;
+	border-radius: 10px;
+	background:#ffc5b3;
+	font-size: 14px;
+	color: #FFFFFF;
+	width: 80px;
+	height:40px;
+	margin:0 20px;
+	outline: none;
+}
+.check-cell .btn-cell .btn-on{
+	background:#ff6f41;
+}

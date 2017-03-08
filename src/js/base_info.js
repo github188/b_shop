@@ -1,11 +1,16 @@
 jQuery(function($) {
 	var initInputClass = $(".jsjk-initval");
-
+	var shopMenuEle = $("#shop-menulist");
+	var menuConClass = $(".menu-content");
+    var onLine = sessionModule.isLogin(sessionStorage.userId);
+    
 	var main = {
 		// 初始化执行
 		init: function() {
 			var self = this;
-			sessionModule.isLogin(sessionStorage.userId); // 判断用户是否处于登陆状态
+			if(stringModule.CheckEmpty(onLine)){  // 判断用户是否处于登陆状态
+				return false;
+			}
 			self.getInfo();
 			self.bindEvent();
 		},
@@ -15,7 +20,7 @@ jQuery(function($) {
 			httpModule.ajaxRequest({
 				name: "基本信息查询", // 接口名称
 				type: "GET",
-				url: hostIp + "/jst-finance-merchant/rest/merchant/single",
+				url: shopIp + "jst-finance-merchantFront/rest/merchantFront/single",
 				data: {
 					id: sessionStorage.userId // 1622224696800223232
 				},
@@ -32,45 +37,84 @@ jQuery(function($) {
 		// 显示商户基本信息
 		showInfo: function(res) {
 			var self = this;
-			initInputClass.attr("placeholder", "");
-			$("#jsjk-companyname").val(res.base.companyName); // 企业名称
-			$("#jsjk-companyshortName").val(res.base.companyShortName); // 企业简称
-			$("#jsjk-companytype").val(res.base.companyType); // 企业类型
-			$("#jsjk-busLicenceno").val(res.base.busLicenceNo); // 营业执照号
-			$("#jsjk-busLicenceaddr").val(res.base.busLicenceAddr); // 营业执照所在地
-			$("#jsjk-busLicencedate").val(res.base.busLicenceStartDate + " ~ " + res.base.busPersonEndDate); // 营业执照有效期
-			$("#jsjk-agencycode").val(res.base.agencyCode); // 组织机构代码
-			$("#jsjk-businessrange").val(res.base.businessRange); // 营业范围
-			$("#jsjk-contactname").val(res.base.contactName); // 联系人姓名
-			$("#jsjk-contacttel").val(res.base.contactTel); //  联系人手机
-			$("#jsjk-contactemail").val(res.base.contactEmail); //  联系人邮箱
-			$("#jsjk-corporatename").val(res.base.corporateName); // 法人姓名
-			$("#jsjk-corporatecardno").val(res.base.corporateCardNo); // 法人身份证号码
-			$("#jsjk-corporatedate").val(res.base.corporateStartDate + " ~ " + res.base.corporateEndDate); // 法人证件有效期
-			$("#jsjk-buspersonname").val(res.base.busPersonName); // 商务人员姓名
-			$("#jsjk-buspersoncode").val(res.base.busPersonCode); // 商务人员身份证号码
-			$("#jsjk-buspersondate").val(res.base.busPersonStartDate + " ~ " + res.base.busPersonEndDate); // 商务人员证件有效期
-			self.showBank(res.bankList); // 开户银行信息
-			self.showSettle(res.settlementList); // 结算人信息
-			self.showImg("#jsjk-companylogo", res.imageList, 1); // 企业LOGO
-			self.showImg("#jsjk-companylicence", res.imageList, 2); // 营业执照
-			self.showImg("#jsjk-corporateident", res.imageList, 3); // 法人证件图片
-			self.showImg("#jsjk-buspersonident", res.imageList, 4); // 商务人员证件图片
+			//initInputClass.attr("placeholder", "");
+			$("#jsjk-companyname").html(res.base.companyName); // 企业名称
+			$("#jsjk-companyshortName").html(res.base.companyShortName); // 企业简称
+			$("#jsjk-companytype").html(res.base.companyType); // 企业类型
+			$("#jsjk-busLicenceno").html(res.base.busLicenceNo); // 营业执照号
+			$("#jsjk-busLicenceaddr").html(res.base.busLicenceAddr); // 营业执照所在地
+			$("#jsjk-busLicencedate").html(res.base.busLicenceStartDate + " ~ " + res.base.busPersonEndDate); // 营业执照有效期
+			$("#jsjk-agencycode").html(res.base.agencyCode); // 组织机构代码
+			$("#jsjk-businessrange").html(res.base.businessRange); // 营业范围
+			$("#jsjk-contactname").html(res.base.contactName); // 联系人姓名
+			$("#jsjk-contacttel").html(res.base.contactTel); //  联系人手机
+			$("#jsjk-contactemail").html(res.base.contactEmail); //  联系人邮箱
+			$("#jsjk-corporatename").html(res.base.corporateName); // 法人姓名
+			$("#jsjk-corporatecardno").html(res.base.corporateCardNo); // 法人身份证号码
+			$("#jsjk-corporatedate").html(res.base.corporateStartDate + " ~ " + res.base.corporateEndDate); // 法人证件有效期
+			$("#jsjk-buspersonname").html(res.base.busPersonName); // 商务人员姓名
+			$("#jsjk-buspersoncode").html(res.base.busPersonCode); // 商务人员身份证号码
+			$("#jsjk-buspersondate").html(res.base.busPersonStartDate + " ~ " + res.base.busPersonEndDate); // 商务人员证件有效期
+			$("#jsjk-bankcardno").html(res.bankList[0].bankCardNo); // 开户银行号
+			$("#jsjk-bankname").html(res.bankList[0].bankName); // 开户银行
+			$("#jsjk-openbranbank").html(res.bankList[0].openBranbank); // 开户支行
+			$("#jsjk-bankcity").html(res.bankList[0].openProvince + " - " + res.bankList[0].openCity); // 开户银行所在地
+			$("#jsjk-openname").html(res.bankList[0].openName); // 开户人姓名
+			if(res.settlementList[0].settlementType == "1"){
+				$("#jsjk-settletype").html("结算到银行卡"); // 结算方式
+			}
+			if(res.settlementList[0].settlementType == "2"){
+				$("#jsjk-settletype").html("结算到余额"); // 结算方式
+			}
+			if(res.settlementList[0].feeInOut == "01"){
+				$("#jsjk-feeinout").html("交易内收费"); // 结算类型
+			}
+			if(res.settlementList[0].feeInOut == "02"){
+				$("#jsjk-feeinout").html("交易外收费"); // 结算类型
+			}
+			$("#jsjk-settlecycle").html("T+"+res.settlementList[0].cycle); // 结算周期
+			$("#jsjk-settlerate").html(res.settlementList[0].rate  + " ‰"); // 结算费率
+			if(res.merchantSettlementConfList.length > 0) {
+				$("#jsjk-feemerchantname").html(res.merchantSettlementConfList[0].feeMerchantName); // 分润方商户名称
+				$("#jsjk-feemerchantid").html(res.merchantSettlementConfList[0].feeMerchantId); // 分润方商户号
+				$("#jsjk-feerate").html(res.merchantSettlementConfList[0].feeRate + " ‰"); // 分润方比率
+			}
+			$("#jsjk-settlename").html(res.settlementList[0].contactName); // 联系人姓名
+			$("#jsjk-settletel").html(res.settlementList[0].contactTel); // 联系人姓名
+			$("#jsjk-settleemail").html(res.settlementList[0].contactEmail); // 联系人姓名
+			//self.showBank(res.bankList); // 开户银行信息
+			//self.showSettle(res.settlementList); // 结算人信息
+			$.each(res.imageList,function(key, val){
+				if(val.type == 1){
+					$("#jsjk-comlogo").html("<img src='" + val.imageMin + "' />");
+					return false;
+				}
+			});
+			//self.showImg("#jsjk-companylogo", res.imageList, 1, "企业LOGO图片"); // 企业LOGO
+			self.showImg("#jsjk-companylicence", res.imageList, 2, "营业执照图片"); // 营业执照
+			self.showImg("#jsjk-corporateident", res.imageList, 3, "证件照片"); // 法人证件图片
+			self.showImg("#jsjk-buspersonident", res.imageList, 4, "证件照片"); // 商务人员证件图片
 		},
 		// 事件绑定
 		bindEvent: function() {
-
+           shopMenuEle.find("li").bind("click",function(){
+           	var theMenu = $(this).index();
+	           	$(this).siblings("li").removeClass("menu-nav-pick");
+	           	$(this).addClass("menu-nav-pick");
+	           	menuConClass.eq(theMenu).removeClass("none");
+	           	menuConClass.eq(theMenu).siblings(".menu-content").addClass("none");
+           });
 		},
 		// 显示图片
-		showImg: function(ele, data, type) {
+		showImg: function(ele, data, type, tit) {
 			var self = this;
 			var imghtml = "";
 			var imgtemp = ""
 			$.each(data, function(key, val) {
-				if(val.type == type) {
+				if(val.type == type && key <= 10) {
 					imgtemp = "colorbox-" + type;
-					imghtml += "<li><a href='" + val.imageMax + "' data-rel='"+imgtemp+"'><img src='" + val.imageMin + "' /><div class='text'><div class='inner'>点击放大</div></div></a></li>";
-					return false;
+					imghtml += "<li><a href='" + val.imageMax + "' data-rel='"+imgtemp+"'><img src='" + val.imageMin + "' /><div class='text'><div class='inner'>点击放大</div></div></a><p>"+tit+"</p></li>";
+					//return false;
 				}
 			});
 			$(ele).html(imghtml);
@@ -107,9 +151,15 @@ jQuery(function($) {
 			var settlename = "";
 			var settletel = "";
 			var settleemail = "";
+			var type = "";
 			$.each(data, function(key, val) {
-				settleType += "<option value='" + val.settlementType + "'>" + val.settlementType + "</option>";
-				settlecycle += "<option value='" + val.cycle + "'>" + val.cycle + "</option>";
+				if(val.settlementType == "1"){
+					type = "结算到银行卡";
+				}else{
+					type = "结算到余额户";
+				}
+				settleType += "<option value='" + val.settlementType + "'>" + type + "</option>";
+				settlecycle += "<option value='" + val.cycle + "'>T+" + val.cycle + "</option>";
 				settlerate += "<option value='" + val.rate + "'>" + val.rate + "</option>";
 				settlename += "<option value='" + val.contactName + "'>" + val.contactName + "</option>";
 				settletel += "<option value='" + val.contactTel + "'>" + val.contactTel + "</option>";

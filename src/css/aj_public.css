@@ -1,0 +1,190 @@
+.aj-logo{
+	font-size:24px;
+	font-weight: bold;
+}
+*{
+	font-family: "微软雅黑"!important;
+}
+
+.navbar{
+	background:#F4F4F4;
+	height: 70px;
+}
+.navbar .navbar-brand{
+	color:#d5d5d5;
+	font-weight: bold;
+	font-size:26px;
+	padding-top: 18px;
+}
+.navbar .navbar-brand:hover{
+	color:#d5d5d5;
+}
+.navbar .navbar-brand small img{
+	height:38px;
+	width:140px;
+	border:0;
+}
+.navbar .navbar-brand small .platform-name{
+	display: inline-block;
+	border-left:1px solid #D5D5D5;
+	padding-left: 20px;
+	margin-left: 20px;
+}
+.ace-nav .top-username{
+	color:#333333;
+	font-size:16px;
+	font-family: "微软雅黑";
+	line-height: 70px;
+	text-align: center;
+}
+.ace-nav .logout{
+	width:80px;
+	height:70px;
+	background:#dedede;
+	color:#333333;
+	font-size:16px;
+	font-family: "微软雅黑";
+	line-height: 70px;
+	margin-left:30px;
+	text-align: center;
+}
+.no-skin .sidebar{
+	background-color: #323232;
+}
+.no-skin .nav-list .nav-li{
+	background-color: #323232!important;
+	border:0!important;
+}
+.no-skin .nav-list .nav-li:before{
+	content:"";
+	height:0;
+	width:0;
+	display: block;
+	overflow: hide;
+}
+.no-skin .nav-list .nav-li>a{
+	background-color: #323232!important;
+	padding-left: 17px;
+}
+.nav-list>li>a{
+	height:74px;
+	padding-left: 17px;
+}
+.no-skin .nav-list>li.open{
+	background-color: #323232!important;
+}
+.no-skin .nav-list>li.open>a{
+	background-color: #323232!important;
+}
+.nav-list>li>.submenu{
+	border:0;
+}
+.nav-list>li>.submenu .nav-li a{
+	padding-left: 60px;
+}
+.no-skin .nav-list>li>a:hover{
+	background-color: #424242!important;
+}
+.no-skin .nav-list>li .submenu>li>a:hover{
+	background-color: #424242!important;
+}
+.no-skin .nav-list>li>.submenu:before, .no-skin .nav-list>li>.submenu>li:before{
+	border:0;
+}
+.second-menu{
+	height:74px;
+	line-height: 60px;
+	color:#FFFFFF!important;
+	font-size: 14px;
+} 
+.menu-text{
+	font-size: 14px;
+	line-height: 52px;
+	color:#FFFFFF;
+}
+.no-skin .nav-list .menu-on>a{
+	background-color: #424242!important;
+}
+.no-skin .nav-list .menu-on.open>a{
+	background-color: #424242!important;
+}
+.icon{
+	display: inline-block;
+	width:40px;
+	height:40px;
+	vertical-align: middle;
+}
+/*我的商户菜单图标*/
+.sh-icon{
+	background:url(../img/icon/icon_shangh.png);
+}
+.sh-icon-on{
+	background:url(../img/icon/icon_shanghp.png);
+}
+.no-skin .nav-list>li>a:hover .sh-icon{
+	background:url(../img/icon/icon_shanghp.png);
+}
+/*交易管理菜单图标*/
+.jy-icon{
+	background:url(../img/icon/icon_jiaoy.png);
+}
+.jy-icon-on{
+	background:url(../img/icon/icon_jiaoyp.png);
+}
+.no-skin .nav-list>li>a:hover .jy-icon{
+	background:url(../img/icon/icon_jiaoyp.png);
+}
+/*结算管理菜单图标*/
+.js-icon{
+	background:url(../img/icon/icon_jies.png);
+}
+.js-icon-on{
+	background:url(../img/icon/icon_jiesp.png);
+}
+.no-skin .nav-list>li>a:hover .js-icon{
+	background:url(../img/icon/icon_jiesp.png);
+}
+/*商户资料管理菜单图标*/
+.zl-icon{
+	background:url(../img/icon/icon_zil.png);
+}
+.zl-icon-on{
+	background:url(../img/icon/icon_zilp.png);
+}
+.no-skin .nav-list>li>a:hover .zl-icon{
+	background:url(../img/icon/icon_zilp.png);
+}
+/*商户资料管理菜单图标*/
+.zl-icon{
+	background:url(../img/icon/icon_zil.png);
+}
+.zl-icon-on{
+	background:url(../img/icon/icon_zilp.png);
+}
+.no-skin .nav-list>li>a:hover .zl-icon{
+	background:url(../img/icon/icon_zilp.png);
+}
+/*操作员管理菜单图标*/
+.cz-icon{
+	background:url(../img/icon/icon_caozy.png);
+}
+.ca-icon-on{
+	background:url(../img/icon/icon_caozyp.png);
+}
+.no-skin .nav-list>li>a:hover .cz-icon{
+	background:url(../img/icon/icon_caozy.png);
+}
+
+.footer .footer-inner .footer-content{
+	border-top:0;
+	left:0;
+	right:0;
+	height:104px;
+	background-color: #F4F4F4;
+}
+
+.company{
+	color:#D1D1D1;
+	line-height: 104px;
+}
+

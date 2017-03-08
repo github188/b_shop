@@ -33,7 +33,7 @@
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
-
+		<link rel="stylesheet" href="../../css/aj_public.css" />
 		<!-- ace settings handler -->
 		<script src="../../js/ace-extra.min.js"></script>
 
@@ -55,10 +55,10 @@
 			<div class="navbar-container" id="navbar-container">
 				<div class="navbar-header pull-left">
 					<!-- #section:basics/navbar.layout.brand -->
-					<a href="#" class="navbar-brand">
-						<small>
-							<i class="fa fa-leaf"></i>
-							B门户
+					<a href="index.html" class="navbar-brand">
+						<small class="aj-logo">
+							<img src="../../img/logo/top_logo.png"/>
+							商户平台
 						</small>
 					</a>
 
@@ -118,7 +118,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="../home/login.html">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
@@ -182,20 +182,26 @@
 				<ul class="nav nav-list">
 					
 					<li class="hover">
-						<a href="#" class="dropdown-toggle">
+						<a href="index.html">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">我的商户</span>
-
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 
 						<b class="arrow"></b>
-
-
+						<ul class="submenu">
+							<li class="hover">
+								<a href="base_info.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									基本信息
+								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
 					</li>
 
 					<li class="active open hover">
-						<a href="#" class="dropdown-toggle">
+						<a href="javascript:void(0)">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> 交易管理 </span>
 
@@ -206,7 +212,7 @@
 
 						<ul class="submenu">
 							<li class="hover">
-								<a href="tables.html" class="dropdown-toggle">
+								<a href="trade_record.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									交易记录
 								</a>
@@ -214,20 +220,20 @@
 								<b class="arrow"></b>
 							</li>
 
-							<li class="hover">
-								<a href="jqgrid.html" class="dropdown-toggle">
+							<!--<li class="hover">
+								<a href="trade_bill.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									对账单
 								</a>
 
 								<b class="arrow"></b>
-							</li>
+							</li>-->
 						</ul>
 					</li>
 
 
 					<li class="hover">
-						<a href="widgets.html">
+						<a href="account_settle.html">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text"> 结算管理 </span>
 						</a>
@@ -236,7 +242,7 @@
 					</li>
 
 					<li class="hover">
-						<a href="calendar.html">
+						<a href="javascript:void(0)">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">
@@ -248,11 +254,10 @@
 					</li>
 
 					<li class="hover">
-						<a href="gallery.html">
+						<a href="javascript:void(0)">
 							<i class="menu-icon fa fa-picture-o"></i>
 							<span class="menu-text"> 操作员管理 </span>
 						</a>
-
 						<b class="arrow"></b>
 					</li>
 
@@ -285,78 +290,42 @@
 							</h1>
 						</div><!-- /.page-header -->
 
-						<div class="row width-60 aj-mar">
-							
-							<div class="widget-box ui-sortable-handle">
-								<div class="widget-header">
-									<h5 class="widget-title">退款成功</h5>
-
-									<!-- #section:custom/widget-box.toolbar -->
-									<div class="widget-toolbar">
-										
-									</div>
-
-									<!-- /section:custom/widget-box.toolbar -->
-								</div>
-
-								<div class="widget-body">
-									<div class="widget-main">
-										<p class="">
-											退款编号：20160909000000003
-										</p>
-										<p class="">
-											退款时间：2016-12-12 11:12:09
-										</p>
-										<p class="">
-											退款金额：￥36.00
-										</p>
-										<p class="">
-											退款状态：退款成功
-										</p>
-									</div>
-								</div>
-							</div>
-							<table id="sample-table-2" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
-										<thead>
-											<tr role="row">
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">订单创建时间</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">付款时间</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">商品名称</th>
-												<th class="hidden-480 sorting_disabled center" rowspan="1" colspan="1" aria-label="">交易总额</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr role="row" class="odd">
-												<td class="center">2015-05-06 11:18:36</td>
-												<td class="center">2015-05-06 11:18:36</td>											
-												<td class="hidden-480">xxxxxxxx</td>
-												<td>￥66.00</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td class="" colspan="4">
-													
-													<div class="widget-body">
-														<div class="widget-main">
-															<p class="">
-																商户订单号：20160909000000003
-															</p>
-															<p class="">
-																商户名称：皇廷
-															</p>
-															<p class="">
-																交易号：20160909000000001
-															</p>
-															<p class="">
-																交易类型：收款
-															</p>
-														</div>
-													</div>
-												</td>
-												
-											</tr>
-										</tbody>
-									</table>
+						<div class="row">
+							<h4>订单详情</h4>
+							<table class="table table-bordered table-striped">
+								<thead>
+									<th>订单创建时间</th>
+									<th>付款时间</th>
+									<th>商品名称</th>
+									<th>交易总额</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td id="createTime"></td>
+										<td id="payTime"></td>
+										<td id="goodsName"></td>
+										<td id="paySum"></td>
+									</tr>
+									<tr>
+										<td>商户订单</td>
+										<td colspan="3" id="shopId"></td>
+									</tr>
+									<tr>
+										<td>商户名称</td>
+										<td colspan="3" id="shopName"></td>
+									</tr>
+									<tr>
+										<td>交易号</td>
+										<td colspan="3" id="tradeId"></td>
+									</tr>
+									<tr>
+										<td>交易类型</td>
+										<td colspan="3" id="tradeType"></td>
+									</tr>
+								</tbody>
+							</table>
+							<h4>退款详情</h4>
+							<table id="lists" class="table table-bordered table-striped"></table>
 							
 						</div><!-- /.row -->
 					</div><!-- /.page-content-area -->
@@ -420,6 +389,11 @@
 		<script src="../../js/jquery-ui.min.js"></script>
 		<script src="../../js/jquery.ui.touch-punch.min.js"></script>
 		<script type="text/javascript" src="../../js/bootstrap-datepicker.min.js" ></script>
+		<script src="../../js/bootstrap-table.min.js"></script>
+		<script src="../../js/bootstrap-table-zh-CN.js"></script>
+		<script src="../../js/bootstrap-datepicker.min.js"></script>
+		<script src="../../js/bootstrap-datepicker.zh-CN.js"></script>
+		<script src="../../js/num_input.js"></script>
 		<!-- ace scripts -->
 		<script src="../../js/ace-elements.min.js"></script>
 		<script src="../../js/ace.min.js"></script>

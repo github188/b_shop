@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>商户新增</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../css/datepicker.css" rel="stylesheet" />
+		<link href="../../css/ace.min.css" rel="stylesheet" />
+		<link href="../../css/bootstrap-table.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background-color:#fff">
+		<div class="page-content">
+			<div class="panel panel-default panel-body">
+				<form id="reg-shopform" class="form-horizontal">
+					<div class="form-group check-area check-firstep">
+						<!-- has-error has-success -->
+						<label for="reg-shopemail" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">注册邮箱</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopemail" name="companyEmail" class="width-100 check-item check-param check-scene-a" placeholder="请输入您的邮箱" data-type="email" data-res="lock" data-info="请输入正确的邮箱" />
+								<!--<i class="icon-remove-sign"></i>-->
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-firstep">
+						<label for="reg-shopmobile" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">注册手机号码</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopmobile" name="companyTel" class="width-100 check-item check-param check-scene-a" placeholder="请输入您的手机号码" data-type="mobile" data-res="lock" data-info="请输入正确的手机号码" maxlength="11" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">企业名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopname" name="companyName" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的企业名称" data-type="must" data-res="lock" data-info="请输入正确的企业名称" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopshortname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">企业简称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopshortname" name="companyShortName" class="width-100 check-item check-allow check-param" placeholder="请输入您的企业简称" data-type="must" data-res="pass" data-info="请输入正确的企业简称" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shoptype" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">企业类型</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<select id="reg-shoptype" name="companyType" class="width-100 check-item check-param check-scene-b" data-type="must" data-res="lock" data-info="请选择您的企业类型">
+                                   <option value="">请选择您的企业类型</option>
+                                   <option value="商城百货">商城百货</option>
+                                   <option value="餐饮美食">餐饮美食</option>
+                                   <option value="休闲娱乐">休闲娱乐</option>
+                                   <option value="美容美发">美容美发</option>
+                                   <option value="旅游景点">旅游景点</option>
+                                   <option value="文化教育">文化教育</option>
+                                   <option value="体育健身">体育健身</option>
+                                   <option value="汽车服务">汽车服务</option>
+                                   <option value="专营专卖">专营专卖</option>
+                                   <option value="面包糕点">面包糕点</option>
+                                   <option value="数码家电">数码家电</option>
+                                   <option value="便利服务">便利服务</option>
+                                   <option value="其他">其他</option>
+                                </select>
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">企业LOGO</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input id="reg-shoplogo" name="logo" class="reg-imgupload check-item check-allow check-param hidden" type="file" data-type="must" data-res="pass" accept="image/gif,image/jpeg,image/x-png" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shoplicensecode" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">营业执照号</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shoplicensecode" name="busLicenceNo" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的营业执照号" data-type="license" data-res="lock" data-info="请输入正确的营业执照号" maxlength="15" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shoplicenseaddr" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">营业执照所在地</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shoplicenseaddr" name="busLicenceAddr" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的营业执照所在地" data-type="must" data-res="lock" data-info="请输入正确的营业执照所在地" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">营业执照有效期</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input class="check-item check-datepicker date-picker check-param check-scene-b" id="reg-shoplic-start" name="busLicenceStartDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的营业执照有效期"> 至 <input class="check-item check-datepicker date-picker check-param check-scene-b" id="reg-shoplic-end" name="busLicenceEndDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的营业执照有效期" />
+								<label>
+									<input class="ace ace-switch reg-longdate" type="checkbox">
+									<span class="lbl"></span>
+							</label>
+							长期
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">营业执照图片</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input id="reg-shoplicense" name="license" class="check-item reg-imgupload check-param hidden check-scene-b" multiple="multiple" type="file" data-type="must" data-res="lock" data-info="请上传营业执照图片" accept="image/gif,image/jpeg,image/x-png" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shoporgcode" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">组织机构代码</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shoporgcode" name="agencyCode" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的组织机构代码" data-type="orgcode" data-res="lock" data-info="请输入正确的组织机构代码" maxlength="10" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shoprange" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">营业范围</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shoprange" name="businessRange" class="width-100 check-item check-allow check-param" placeholder="请输入您的营业范围" data-type="must" data-res="pass" data-info="请输入正确的营业范围" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopbankcard" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户银行卡号</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopbankcard" name="bankCardNo" class="width-100 check-item check-param check-bank check-scene-b" placeholder="请输入您的银行卡号" data-type="number" data-res="lock" data-info="请输入正确的银行卡号" maxlength="30" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopbankname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户银行名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopbankname" name="bankName" class="width-100 check-item check-param" placeholder="请输入您的银行名称" data-type="name" data-res="lock" data-info="请输入正确的银行名称"  />
+								<input type="hidden" id="reg-shopbankcode" name="bankCode" class="check-param" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopopenbank" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户支行名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopopenbank" name="openBranbank" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的开户支行名称" data-type="must" data-res="lock" data-info="请输入正确的开户支行名称" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopopenprovince" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户银行所在省/市</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopopenprovince" name="openProvince" class="width-100 check-item check-param check-scene-b" placeholder="请输入您的开户银行所在省/市" data-type="must" data-res="lock" data-info="请输入正确的省/市" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopopencity" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户银行所在市/区/县</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopopencity" name="openCity" class="width-100 check-item check-allow check-param" placeholder="请输入您的开户银行所在市/区/县" data-type="must" data-res="pass" data-info="请输入正确的市/区/县" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopopenname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">开户人姓名</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							<input type="text" id="reg-shopopenname" name="openName" class="width-100 check-item check-param check-scene-b" placeholder="请输入开户人姓名" data-type="must" data-res="lock" data-info="请输入正确的开户人姓名" />
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopcontactname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">联系人姓名</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopcontactname" name="contactName" class="width-100 check-item check-allow check-param" placeholder="请输入您的联系人姓名" data-type="must" data-res="pass" data-info="请输入正确的姓名" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopcontacttel" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">联系人手机</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopcontacttel" name="contactTel" class="width-100 check-param check-item check-allow" placeholder="请输入您的联系人手机号码" data-type="mobile" data-res="pass" data-info="请输入正确的手机号码" maxlength="11"  />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips ">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopcontactemail" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">联系人邮箱</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopcontactemail" name="contactEmail" class="width-100 check-param check-item check-allow" placeholder="请输入您的联系人邮箱" data-type="email" data-res="pass" data-info="请输入正确的邮箱" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopcorname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">法人姓名</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							<input type="text" id="reg-shopcorname" name="corporateName" class="width-100 check-item check-param check-scene-b" placeholder="请输入法人姓名" data-type="must" data-res="lock" data-info="请输入正确的法人姓名" />
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopcorident" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">法人身份证号码</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							<input type="text" id="reg-shopcorident" name="corporateCardNo" class="width-100 check-item check-param check-scene-b" placeholder="请输入身份证号码" data-type="ident" data-res="lock" data-info="请输入正确的身份证号码" maxlength="18" />
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">法人证件有效期</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input class="check-item check-datepicker date-picker check-param check-scene-b" id="reg-shopcor-start" name="corporateStartDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的证件有效期"> 至 <input class="check-item check-datepicker date-picker check-param check-scene-b" id="reg-shopcor-end" name="corporateEndDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的证件有效期" />
+								<label>
+									<input class="ace ace-switch reg-longdate" type="checkbox">
+									<span class="lbl"></span>
+							</label>
+							长期
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">法人证件图片</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input id="reg-shoplegal" name="legal" class="check-item reg-imgupload check-param hidden check-scene-b" multiple="multiple" type="file" data-type="must" data-res="lock" data-info="请上传法人证件图片" accept="image/gif,image/jpeg,image/x-png" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopbuspername" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">商务人员姓名</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							<input type="text" id="reg-shopbuspername" name="busPersonName" class="width-100 check-item check-param check-scene-b" placeholder="请输入商务人员姓名" data-type="must" data-res="lock" data-info="请输入正确的商务人员姓名" />
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label for="reg-shopbusident" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">商务人员身份证号码</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							<input type="text" id="reg-shopbusident" name="busPersonCode" class="width-100 check-item check-param check-scene-b" placeholder="请输入身份证号码" data-type="ident" data-res="lock" data-info="请输入正确的身份证号码" maxlength="18" />
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">商务人员证件有效期</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input class="check-item check-datepicker date-picker check-param check-scene-b" id="reg-shopbus-start" name="busPersonStartDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的证件有效期"> 至 <input class="check-item check-datepicker date-picker check-param" id="reg-shopbus-end" name="busPersonEndDate" type="text" data-type="must" data-res="lock" data-info="请输入正确的证件有效期" />
+								<label>
+									<input class="ace ace-switch reg-longdate" type="checkbox">
+									<span class="lbl"></span>
+							</label>
+							长期
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-secstep hidden">
+						<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">商务人员证件图片</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input id="reg-shopbusiness" name="business" class="check-item reg-imgupload check-param hidden check-scene-b" multiple="multiple" type="file" data-type="must" data-res="lock" data-info="请上传商务人员证件图片" accept="image/gif,image/jpeg,image/x-png" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettletype" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算方式</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<select id="reg-shopsettletype" name="settlementType" class="width-100 check-item check-param check-scene-c" data-type="must" data-res="lock" data-info="请选择您的结算方式">
+                                   <option value="">请选择您的结算方式</option>
+                                   <option value="1">结算到银行卡</option>
+                                   <option value="2">结算到余额</option>
+                                </select>
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-feeinout" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算类型</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<select id="reg-feeinout" name="feeInOut" class="width-100 check-item check-param check-scene-c" data-type="must" data-res="lock" data-info="请选择您的结算类型">
+                                   <option value="">请选择您的结算类型</option>
+                                   <option value="01">交易内收费</option>
+                                   <option value="02">交易外收费</option>
+                                </select>
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettlecycle" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算周期</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+							T + <input type="text" id="reg-shopsettlecycle" name="cycle" class="width-20 check-item check-param check-scene-c" placeholder="请输入结算周期" data-type="number" data-res="lock" data-info="请输入合法的正整数" /> 天
+						</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettlerate" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算费率</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopsettlerate" name="rate" class="width-20 check-item check-param check-scene-c" placeholder="请输入结算费率" data-type="number" data-res="lock" data-info="请输入合法的正整数" /> ‰
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-feemerchantid" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">分润方商户号</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-feemerchantid" name="feeMerchantId" class="width-100 check-param check-item check-allow" placeholder="请输入分润方商户号" data-type="number" data-res="pass" data-info="请输入正确的分润方商户号" maxlength="7" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips ">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-feemerchantname" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">分润方商户名称</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-feemerchantname" name="feeMerchantName" class="width-100 check-param check-item check-allow" placeholder="请输入分润方商户名称" data-type="must" data-res="pass" data-info="请输入正确的分润方商户名称" readonly="readonly" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips ">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-feerate" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">分润方比率</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-feerate" name="feeRate" class="width-20 check-param check-item check-allow" placeholder="请输入分润方比例" data-type="number" data-res="pass" data-info="请输入合法的正整数" /> ‰
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips ">(非必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettlename" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算联系人姓名</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopsettlename" name="settleContactName" class="width-100 check-item check-param check-scene-c" placeholder="请输入结算联系人姓名" data-type="must" data-res="lock" data-info="请输入正确的姓名" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettletel" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算联系人手机</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopsettletel" name="settleContactTel" class="width-100 check-item check-param check-scene-c" placeholder="请输入结算联系人手机号码" data-type="mobile" data-res="lock" data-info="请输入正确的手机号码" maxlength="11" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+					<div class="form-group check-area check-thistep hidden">
+						<label for="reg-shopsettleemail" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">结算联系人邮箱</label>
+						<div class="col-xs-12 col-sm-5">
+							<span class="block input-icon input-icon-right">
+								<input type="text" id="reg-shopsettleemail" name="settleContactEmail" class="width-100 check-item check-param check-scene-c" placeholder="请输入结算联系人邮箱" data-type="email" data-res="lock" data-info="请输入正确的邮箱" />
+							</span>
+						</div>
+						<div class="help-block col-xs-12 col-sm-reset inline check-tips">(必填)</div>
+					</div>
+				</form>
+				<div class="form-group check-btnbox">
+					<label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right"></label>
+					<div class="col-xs-12 col-sm-5 center">
+						<span class="block input-icon input-icon-right">
+							<button id="reg-nextbtn" class="btn btn-sm btn-danger width-30 check-firstep">下一步</button>
+							<button id="reg-checkbtn" class="btn btn-sm btn-danger width-30 check-secstep hidden">下一步</button>
+							<button id="reg-surebtn" class="btn btn-sm btn-danger width-30 check-thistep hidden">下一步</button>
+							<button id="reg-intobtn" class="btn btn-sm btn-danger width-30 check-thistep-btn hidden">确认无误&提交</button>
+							<button id="reg-backbtn" class="btn btn-sm btn-danger width-30 check-thistep-btn hidden">返回修改</button>
+						</span>
+					</div>
+					<div class="help-block col-xs-12 col-sm-reset inline"></div>
+				</div>
+
+			</div>
+		</div>
+		
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/ace.min.js"></script>		
+		<script src="../../js/bootstrap.js"></script>
+		<script src="../../js/ace-elements.min.js"></script>
+		
+		<!--<script src="../../js/home/bootstrap-tab.js"></script>-->
+
+		<!--加密模块-->
+		<script type="text/javascript" src="../../js/core.js"></script>
+		<script type="text/javascript" src="../../js/enc-base64.js"></script>
+		<script type="text/javascript" src="../../js/md5.js"></script>
+
+		<!-- 时间插件 -->
+		<script src="../../js/bootstrap-datepicker.min.js"></script>
+		<!-- 业务js -->
+		<script src="../../js/common.js"></script>
+		<script src="../../js/register_steps.js"></script>
+	</body>
+
+</html>

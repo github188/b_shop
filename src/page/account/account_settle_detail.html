@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<title>首页-商户平台</title>
+
+		<meta name="description" content="overview &amp; stats">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="../../css/datepicker.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../../css/ace-fonts.css">
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style">
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="../../css/ace-skins.min.css">
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css">
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/account_settle_detail.css" />
+		<!-- ace settings handler -->
+		<script src="../../js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="../../js/html5shiv.min.js"></script>
+		<script src="../../js/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.jqstooltip {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				visibility: hidden;
+				background: rgb(0, 0, 0) transparent;
+				background-color: rgba(0, 0, 0, 0.6);
+				filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+				color: white;
+				font: 10px arial, san serif;
+				text-align: left;
+				white-space: nowrap;
+				padding: 5px;
+				border: 1px solid white;
+				z-index: 10000;
+			}
+			
+			.jqsfield {
+				color: white;
+				font: 10px arial, san serif;
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+		<div id="navbar" class="navbar navbar-default">
+			<script type="text/javascript">
+				try {
+					ace.settings.check('navbar', 'fixed')
+				} catch(e) {}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+
+				<!-- 图标 logo -->
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="index.html" class="navbar-brand">
+						<small>
+							<img src="../../img/logo/logo.png"/>
+							<span class="platform-name">商户平台</span>
+						</small>
+					</a>
+
+				</div>
+
+				<!-- #section:basics/navbar.dropdown -->
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="top-username">您好，小气鬼</li>
+						<li class="logout">退出</li>
+					</ul>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div>
+			<!-- /.navbar-container -->
+		</div>
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try {
+					ace.settings.check('main-container', 'fixed')
+				} catch(e) {}
+			</script>
+
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar responsive">
+				<script type="text/javascript">
+					try {
+						ace.settings.check('sidebar', 'fixed')
+					} catch(e) {}
+				</script>
+
+				<ul class="nav nav-list" style="top: 0px;" id="menu">
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon sh-icon"></i>
+							<span class="menu-text"> 我的商户 </span>
+						</a>
+						<ul class="submenu" id="shMenu">
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">基本信息</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon jy-icon"></i>
+							<span class="menu-text">交易管理</span>
+						</a>
+						<ul class="submenu" id="jyMenu">
+							<li class="nav-li menu-on">
+								<a href="javascript:void(0)" class="second-menu">交易记录</a>
+							</li>
+						</ul>
+
+					</li>
+
+					<li class="hsub nav-li active">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon js-icon"></i>
+							<span class="menu-text">结算管理 </span>
+						</a>
+						<ul class="submenu" id="jsMenu">
+							<li class="nav-li menu-on">
+								<a href="javascript:void(0)" class="second-menu">已结算查询</a>
+							</li>
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">结算详情</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon zl-icon"></i>
+							<span class="menu-text"> 商户资料管理 </span>
+						</a>
+					</li>
+
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)">
+							<i class="icon js-icon"></i>
+							<span class="menu-text"> 操作员管理 </span>
+						</a>
+					</li>
+
+				</ul>
+				<!-- /.nav-list -->
+
+				<!-- /section:basics/sidebar.layout.minimize -->
+				<script type="text/javascript">
+					try {
+						ace.settings.check('sidebar', 'collapsed')
+					} catch(e) {}
+				</script>
+			</div>
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="menu-box">
+					<ul class="search-keylist">
+						<li class="search-fircell">结算时间：<input class="date-picker search-input w28" type="text" placeholder="开始时间" id="jsjk-starttime" /><input class="search-icon-v" type="text" readonly="readonly" /> 至 <input class="date-picker search-input w28" type="text" placeholder="结束时间" id="jsjk-endtime" /><input class="search-icon-v" type="text" readonly="readonly" /></li>
+						<li class="search-seccell">结算类型：
+							<select class="search-select w50" id="jsjk-settletype">
+								<option value="">全 部</option>
+								<option value="1">结算到银行卡</option>
+								<option value="2">结算到余额户</option>
+							</select>
+						</li>
+						<li class="search-thrcell">商户名称：<input id="jsjk-shopname" class="search-input w60" type="text" value="" /></li>
+					    <li class="search-fourcell">
+					    	  <input id="jsjk-settlebtn" class="search-button" type="button" value="查询" />
+					    	  <input id="reset-btn" class="search-reset" type="button"  value="重置" />
+					    </li>
+					</ul>
+					<div class="trade-table">
+						<table id="jsjk-settlelist" class="table table-bordered table-striped"></table>
+					</div>
+				</div>
+			</div>
+			<!-- /.main-content -->
+
+			<div class="footer">
+				<div class="footer-inner">
+					<!-- #section:basics/footer -->
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="company">捷顺金融科技技术服务有限公司</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>" + "<" + "/script>");
+		</script>
+		<script src="../../js/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../../js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+		</script>
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/bootstrap-table.min.js"></script>
+		<script src="../../js/bootstrap-table-zh-CN.js"></script>
+		<script src="../../js/num_input.js"></script>
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="../../js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="../../js/jquery-ui.min.js"></script>
+		<script src="../../js/jquery.ui.touch-punch.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="../../js/ace-elements.min.js"></script>
+		<script src="../../js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript" src="../../js/public.js"></script>
+		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+
+		<script type="text/javascript">
+			ace.vars['base'] = '..';
+		</script>
+
+		<!-- page specific plugin scripts -->
+		<script src="../../js/bootstrap-datepicker.min.js"></script>
+		<script src="../../js/bootstrap-datepicker.zh-CN.js"></script>
+
+		<!-- 自定义 -->
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/account_settle_detail.js"></script>
+
+		<div class="tooltip top in" style="display: none;">
+			<div class="tooltip-inner"></div>
+		</div>
+
+	</body>
+
+</html>

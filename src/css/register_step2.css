@@ -1,0 +1,54 @@
+.light-login{
+	background:#FFFFFF;
+}
+.form-horizontal .form-group{
+	margin: 0 0 15px;
+	position: relative;
+}
+.banner-cell{
+	width:100%;
+	height:220px;
+	background:url(../img/bg/bj_dengl.png);
+	background-size:100% 100%;
+	position: relative;
+}
+.banner-cell .logo-img{	
+	width:230px;
+	height:168px;
+	position: absolute;
+	left:50%;
+	top:20%;
+	margin-left:-115px;
+}
+.banner-cell .logo-img img{
+	display: block;
+	border: 0;
+	width:100%;
+	height:100%;
+}
+
+.step-cell{
+	width:800px;
+	margin:20px auto;
+}
+.step-cell .ban-cell{
+	padding:20px 0;
+}
+.step-cell .code-btn{
+	background:#D1DFF3;
+	border-radius: 5px;
+	width:86px;
+	height:30px;
+	line-height: 30px;
+	top:2px;
+	cursor: pointer;
+}
+
+.step-cell .pwd-tips{
+	width:324px;
+	position: absolute;
+	top: 0;
+	right:-60px;
+	font-size: 12px;
+	color: #333333;
+}

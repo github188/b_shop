@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>各个系统入口</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+			}
+			.left{
+				float:left;
+			}
+			.right{
+				float:right;
+			}
+			.clear:after{
+				content:"";
+				display: block;
+				height: 0;
+				clear:both;
+				overflow: hidden;
+			}
+			.box{
+				padding:50px;
+			}
+			.cell{
+				width: 300px;
+			}
+			ul{
+				margin-top:30px;
+			}
+			li{
+				padding:5px 10px;
+			}
+			a{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box clear">
+			<div class="left cell">
+				<h3>测试环境</h3>
+				<ul>
+					<li><a href="http://10.101.130.8:8082/apph5/page/home/login.html?winzoom=1">APP入口</a></li>
+					<li><a href="http://10.101.130.8:8111/src/page/home/login.html">B商户入口</a></li>
+					<li><a href="http://10.101.130.8:30001/mgr/pages/login.shtml">OMS入口</a></li>
+				</ul>
+			</div>
+			<div class="cell left">
+				<h3>演练环境</h3>
+				<ul>
+					<li><a href="http://10.101.130.33:8082/apph5/page/home/">APP入口</a></li>
+					<li><a href="http://10.101.130.34:8111/src/page/home/login.html">B商户入口</a></li>
+					<li><a href="http://10.101.130.34:30001/mgr/pages/login.shtml">OMS入口</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

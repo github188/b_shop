@@ -1,36 +1,219 @@
 
-.basic-mes{
-	margin:20px 0;
-}
-.aj-content{
-	width:88%;
-	margin:0 auto;
-}
-.aj-border-lelf{
-	border-left:1px solid #D1D1D1;
-}
-.aj-border-right{
-	border-right:1px solid #D1D1D1;
+
+.main-container:before{
+	background:#F4F4F4;
 }
 
-.shop-sum{
-	line-height:50px;
-	border-top:1px solid #D1D1D1;
-	margin-top:10px;
-	font-size: 24px;
+.main-content{
+	
 }
-.shop-sum i{
-	font-style: normal;
+.page-content{
+	background:#F4F4F4;
+	margin:0;
+	padding:10px 20px 0;
+}
+
+.top-cell{
+	height:164px;
+	background:#FF6F41;
+	color:#FFFFFF;
+}
+
+.basic-mes{
+	margin-left:60px;
+}
+.level-cell{
+	margin-top:20px;
+}
+.state-cell{
+	margin-top:20px;
+	margin-left:22px;
+}
+.level-icon{
 	display: inline-block;
-	margin-right:5px;
+	width:28px;
+	height:24px;
+	background:url(../img/icon/icon_jib.png);
+	background-size:100%;
+	vertical-align: middle;
 }
-.shop-btn{
-	margin:10px 0;
+.level-text{
+	font-size:14px;
 }
-.apply-btn{
-	color: #ea5920;
+.state{
+	display: inline-block;
+	width:28px;
+	height:24px;	
+	background-size:100%;
+	vertical-align: middle;
+}
+.state-yj{
+	background:url(../img/icon/icon_yijq.png);
+}
+.state-dj{
+	background:url(../img/icon/icon_daijq.png);
+}
+.state-text{
+	font-size:14px;
+}
+
+.user-name{
+	font-size: 36px;
+	margin-top:42px;
+	line-height: 36px;
+}
+
+.tips-cell{
+	margin-top:48px;
+	margin-left:36px;
+	
+}
+.tips-text{
+	font-size:14px
+}
+.tips-text a{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.tips-icon{
+	display: inline-block;
+	width:28px;
+	height:28px;	
+	background-size:100%;
+	vertical-align: middle;
+}
+.tips-f{
+	background:url(../img/icon/icon__.png);
+}
+.tips-r{
+	background:url(../img/icon/icon_gou.png);
+}
+/*余额框样式start*/
+.balance-cell{
+	width:100%;
+	background:#FFFFFF;
+	margin-bottom: 10px;
+	height:240px;
+}
+.balance{
+	padding-top:70px;
+	padding-left: 40px;;
+}
+.balance-icon{
+	display:block;
+	width: 100px;
+	height:100px;
+	background-size: 100%;
+	vertical-align: middle;
+}
+.ye-icon{
+	background:url(../img/icon/icon_jine.png);
+}
+.je-icon{
+	background:url(../img/icon/icon_yue.png);
+}
+.balance-text{
+	margin-top:20px;
+	margin-left:20px;
+	margin-bottom: 18px;
+}
+.balance-text h4{
+	font-size: 18px;
+	color:#333333;
+}
+.balance-text .ye-sum{
+	font-size: 18px;
+	color:#fb994b;
+}
+.balance-text .je-sum{
+	font-size: 18px;
+	color:#8ed4eb;
+}
+
+.btn-cell{
+	margin-top:90px;
+}
+.button{
+	width:160px;
+	height:60px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 5px;
+	font-size: 18px;
 	cursor: pointer;
 }
-.ui-dialog{
-	width:880px !important;
+.btn-zz{
+	background:#fcece0;
+	border:1px solid #ff9038;
+	color:#fb994b;
+	margin-right:40px;
+}
+.btn-tx{
+	background:#fcece0;
+	border:1px solid #ff9038;
+	color:#fb994b;
+	margin-right:40px;
+}
+.btn-cz{
+	background:#ff9038;
+	border:1px solid #ff9038;
+	color:#FFFFFF;
+	margin-right:160px;
+}
+
+.btn-icon{
+	display: inline-block;
+	width:36px;
+	height:36px;
+	vertical-align: middle;
+	background-size: 100%;
+}
+.zz-icon{
+	background:url(../img/icon/icon_zhuanz.png);
+}
+.tx-icon{
+	background:url(../img/icon/icon_tix.png);
+}
+.cz-icon{
+	background:url(../img/icon/icon_chongz.png);
+}
+
+/*银行卡管理*/
+.manage-cell{
+	background:#FFFFFF;
+	padding-left:40px;
+	padding-top:70px;
+	padding-bottom:70px;
+}
+.manage-row{
+	width:100%;
+	padding:5px 0;
+}
+.manage-row:after{
+	content:"";
+	display: block;
+	overflow: hidden;
+	clear:both;
+	height:0;
+}
+.manage-lab{
+	float:left;
+	font-size: 18px;
+    color: #333333;
+    width: 120px;
+}
+.manage-content{
+	float:left;
+}
+.manage-cell .manage-row .manage-content a{
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.manage-cell .manage-row .manage-content span{
+	font-size: 18px;
+    color: #D1D1D1;
+    display: inline-block;
+    vertical-align: middle;
+    padding:0 10px;
 }

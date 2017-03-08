@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>交易记录</title>
+<html>
 
-		<meta name="description" content="top menu &amp; navigation" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<title>商户平台-交易记录</title>
+
+		<meta name="description" content="overview &amp; stats">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/font-awesome.min.css">
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="../../css/jquery-ui.min.css" />
 		<link rel="stylesheet" href="../../css/datepicker.css" />
-		
+		<link rel="stylesheet" href="../../css/jquery-ui.min.css" />
 		<!-- text fonts -->
-		<link rel="stylesheet" href="../../css/ace-fonts.css" />
+		<link rel="stylesheet" href="../../css/ace-fonts.css">
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style" />
+		<link rel="stylesheet" href="../../css/ace.min.css" id="main-ace-style">
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="../../css/ace-part2.min.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="../../css/ace-skins.min.css" />
-		<link rel="stylesheet" href="../../css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="../../css/trade_record.css" />
+		<link rel="stylesheet" href="../../css/ace-skins.min.css">
+		<link rel="stylesheet" href="../../css/ace-rtl.min.css">
+
 		<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="../../css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
-
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/trade_record.css" />
 		<!-- ace settings handler -->
 		<script src="../../js/ace-extra.min.js"></script>
 
@@ -43,425 +44,227 @@
 		<script src="../../js/html5shiv.min.js"></script>
 		<script src="../../js/respond.min.js"></script>
 		<![endif]-->
+		<style type="text/css">
+			.jqstooltip {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				visibility: hidden;
+				background: rgb(0, 0, 0) transparent;
+				background-color: rgba(0, 0, 0, 0.6);
+				filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+				color: white;
+				font: 10px arial, san serif;
+				text-align: left;
+				white-space: nowrap;
+				padding: 5px;
+				border: 1px solid white;
+				z-index: 10000;
+			}
+			
+			.jqsfield {
+				color: white;
+				font: 10px arial, san serif;
+				text-align: left;
+			}
+		</style>
 	</head>
 
 	<body class="no-skin">
 		<!-- #section:basics/navbar.layout -->
-		<div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+		<div id="navbar" class="navbar navbar-default">
 			<script type="text/javascript">
-				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+				try {
+					ace.settings.check('navbar', 'fixed')
+				} catch(e) {}
 			</script>
 
 			<div class="navbar-container" id="navbar-container">
+
+				<!-- 图标 logo -->
 				<div class="navbar-header pull-left">
 					<!-- #section:basics/navbar.layout.brand -->
-					<a href="#" class="navbar-brand">
+					<a href="index.html" class="navbar-brand">
 						<small>
-							<i class="fa fa-leaf"></i>
-							B门户
+							<img src="../../img/logo/logo.png"/>
+							<span class="platform-name">商户平台</span>
 						</small>
 					</a>
 
-					<!-- /section:basics/navbar.layout.brand -->
-
-					<!-- #section:basics/navbar.toggle -->
-					<button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
-						<span class="sr-only">Toggle user menu</span>
-
-						<img src="../../images/avatars/user.jpg" alt="Jason's Photo" />
-					</button>
-
-					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".sidebar">
-						<span class="sr-only">Toggle sidebar</span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-
-						<span class="icon-bar"></span>
-					</button>
-
-					<!-- /section:basics/navbar.toggle -->
 				</div>
 
 				<!-- #section:basics/navbar.dropdown -->
-				<div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-
-						<!-- #section:basics/navbar.user_menu -->
-						<li class="light-blue user-min">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../../images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-								<i class="ace-icon fa fa-caret-down"></i>
-							</a>
-
-							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Settings
-									</a>
-								</li>
-
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i>
-										Profile
-									</a>
-								</li>
-
-								<li class="divider"></li>
-
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i>
-										Logout
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<!-- /section:basics/navbar.user_menu -->
+						<li class="top-username">您好，小气鬼</li>
+						<li class="logout">退出</li>
 					</ul>
 				</div>
 
 				<!-- /section:basics/navbar.dropdown -->
-			</div><!-- /.navbar-container -->
+			</div>
+			<!-- /.navbar-container -->
 		</div>
 
 		<!-- /section:basics/navbar.layout -->
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+				try {
+					ace.settings.check('main-container', 'fixed')
+				} catch(e) {}
 			</script>
 
-			<!-- #section:basics/sidebar.horizontal -->
-			<div id="sidebar" class="sidebar      h-sidebar                navbar-collapse collapse">
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar responsive">
 				<script type="text/javascript">
-					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					try {
+						ace.settings.check('sidebar', 'fixed')
+					} catch(e) {}
 				</script>
 
-				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<!-- #section:basics/sidebar.layout.shortcuts -->
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-
-						<!-- /section:basics/sidebar.layout.shortcuts -->
-					</div>
-
-					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
-
-						<span class="btn btn-info"></span>
-
-						<span class="btn btn-warning"></span>
-
-						<span class="btn btn-danger"></span>
-					</div>
-				</div><!-- /.sidebar-shortcuts -->
-
-				<ul class="nav nav-list">
-					
-					<li class="hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">我的商户</span>
-
-							<b class="arrow fa fa-angle-down"></b>
+				<ul class="nav nav-list" style="top: 0px;" id="menu">
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon sh-icon"></i>
+							<span class="menu-text"> 我的商户 </span>
 						</a>
-
-						<b class="arrow"></b>
-
-
-					</li>
-
-					<li class="active open hover">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> 交易管理 </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="hover">
-								<a href="tables.html" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
-									交易记录
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="hover">
-								<a href="jqgrid.html" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
-									对账单
-								</a>
-
-								<b class="arrow"></b>
+						<ul class="submenu" id="shMenu">
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">基本信息</a>
 							</li>
 						</ul>
 					</li>
 
-
-					<li class="hover">
-						<a href="widgets.html">
-							<i class="menu-icon fa fa-list-alt"></i>
-							<span class="menu-text"> 结算管理 </span>
+					<li class="hsub nav-li active">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon jy-icon"></i>
+							<span class="menu-text">交易管理</span>
 						</a>
+						<ul class="submenu" id="jyMenu">
+							<li class="nav-li menu-on">
+								<a href="javascript:void(0)" class="second-menu">交易记录</a>
+							</li>
+						</ul>
 
-						<b class="arrow"></b>
 					</li>
 
-					<li class="hover">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								商户资料管理
-							</span>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon js-icon"></i>
+							<span class="menu-text">结算管理 </span>
 						</a>
-
-						<b class="arrow"></b>
+						<ul class="submenu" id="jsMenu">
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">已结算查询</a>
+							</li>
+							<li class="nav-li">
+								<a href="javascript:void(0)" class="second-menu">结算详情</a>
+							</li>
+						</ul>
 					</li>
 
-					<li class="hover">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+							<i class="icon zl-icon"></i>
+							<span class="menu-text"> 商户资料管理 </span>
+						</a>
+					</li>
+
+					<li class="hsub nav-li">
+						<a href="javascript:void(0)">
+							<i class="icon js-icon"></i>
 							<span class="menu-text"> 操作员管理 </span>
 						</a>
-
-						<b class="arrow"></b>
 					</li>
 
-				</ul><!-- /.nav-list -->
-
-				<!-- #section:basics/sidebar.layout.minimize -->
-				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-				</div>
+				</ul>
+				<!-- /.nav-list -->
 
 				<!-- /section:basics/sidebar.layout.minimize -->
 				<script type="text/javascript">
-					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					try {
+						ace.settings.check('sidebar', 'collapsed')
+					} catch(e) {}
 				</script>
 			</div>
 
-			<!-- /section:basics/sidebar.horizontal -->
+			<!-- /section:basics/sidebar -->
 			<div class="main-content">
-				<div class="page-content">
-					<div class="page-content-area">
-						<div class="page-header">
-							<h1>
-								交易管理
-								<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>
-									交易记录
-								</small>
-							</h1>
-						</div><!-- /.page-header -->
-
-						<div class="row">
-						
-							<div class="col-xs-12">
-
-								<div>
-									<div id="sample-table-2_wrapper" class="dataTables_wrapper form-inline no-footer">
-										<div class="row">
-											<div class="col-xs-5">
-												<span>创建时间：</span>
-												<div class="input-group">													
-													<input class="form-control date-picker" placeholder="开始时间" id="startTime" type="text" data-date-format="yyyy-mm-dd">
-													<span class="input-group-addon">
-														<i class="fa fa-calendar bigger-110"></i>
-													</span>
-												</div>
-												<div class="input-group">													
-													<input class="form-control date-picker" placeholder="结束时间" id="endTime" type="text" data-date-format="yyyy-mm-dd">
-													<span class="input-group-addon">
-														<i class="fa fa-calendar bigger-110"></i>
-													</span>
-												</div>
-											</div>
-											<div class="col-xs-3 center">
-												<span>商户订单号：</span><input type="商户订单号" name="" id="goodsNum" value="" />
-											</div>
-											<div class="col-xs-4">
-												<span>交易状态：</span>
-												<select name="" class="form-control" id="tradeState">
-													<option value="请选择">请选择</option>
-													<option value="交易成功">交易成功</option>
-													<option value="交易失败">交易失败</option>
-													<option value="支付中">支付中</option>
-													<option value="待支付">待支付</option>
-												</select>
-												<button class="btn btn-xs btn-info btn-round" id="checkMes">
-													查询
-												<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-											</button>
-											</div>
-										</div>
-										<table id="sample-table-2" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="sample-table-2_info">
-										<thead>
-											<tr role="row">
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">创建时间</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">商品名称</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">交易号</th>
-												<th class="hidden-480 sorting_disabled center" rowspan="1" colspan="1" aria-label="">商户订单号</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">商户名称</th>
-												<th class="hidden-480 center sorting_disabled" rowspan="1" colspan="1" aria-label="">交易对方</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">金额</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">已退款金额</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">状态</th>
-												<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">操作</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr role="row" class="odd">
-												<td class="center">2015-05-06 11:18:36</td>
-												<td>停车服务</td>
-												<td>8423802835028</td>
-												<td class="hidden-480">6666802835028</td>
-												<td>皇庭</td>
-												<td class="hidden-480">xxxxxxxx</td>
-												<td>￥66.00</td>
-												<td>￥0.00</td>
-												<td>交易成功</td>
-												<td class="center oper">
-													<button class="btn btn-info btn-sm btn-round details">详情</button>
-													<button class="btn btn-info btn-sm btn-round refund">退款</button>
-												</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td class="center">2015-05-06 11:18:36</td>
-												<td>停车服务</td>
-												<td>8423802835111</td>
-												<td class="hidden-480">6666802835111</td>
-												<td>皇庭</td>
-												<td class="hidden-480">xxxxxxxx</td>
-												<td>￥66.00</td>
-												<td>￥0.00</td>
-												<td>交易成功</td>
-												<td class="center">
-													<button class="btn btn-info btn-sm btn-round">详情</button>
-													<button class="btn btn-info btn-sm btn-round refund">退款</button>
-												</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td class="center">2015-05-06 11:18:36</td>
-												<td>停车服务</td>
-												<td>8423802835222</td>
-												<td class="hidden-480">6666802814258</td>
-												<td>皇庭</td>
-												<td class="hidden-480">xxxxxxxx</td>
-												<td>￥66.00</td>
-												<td>￥0.00</td>
-												<td>交易成功</td>
-												<td class="center">
-													<button class="btn btn-info btn-sm btn-round">详情</button>
-													<button class="btn btn-info btn-sm btn-round refund">退款</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<div class="row">
-										<div class="col-xs-6">
-											<div class="dataTables_paginate paging_simple_numbers align-right" id="sample-table-2_paginate">
-												<ul class="pagination">
-													<li class="paginate_button previous" aria-controls="sample-table-2" tabindex="0" id="sample-table-2_previous">
-														<a href="#">上一页</a>
-													</li>
-													<li class="paginate_button active" aria-controls="sample-table-2" tabindex="0">
-														<a href="#">1</a>
-													</li>
-													<li class="paginate_button " aria-controls="sample-table-2" tabindex="0">
-														<a href="#">2</a>
-													</li>
-													<li class="paginate_button " aria-controls="sample-table-2" tabindex="0">
-														<a href="#">3</a>
-													</li>
-													<li class="paginate_button next" aria-controls="sample-table-2" tabindex="0" id="sample-table-2_next">
-														<a href="#">下一页</a>
-													</li>												
-												</ul>											
-											</div>
-										</div>	
-										<div class="col-xs-6">
-											<span>共100页，</span>
-											<span>到</span>
-											<input class="page-input" type="text" id="page"/>
-											<button class="btn btn-info btn-sm btn-round">确定</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						
-						</div><!-- /.row -->
-					</div><!-- /.page-content-area -->
-				</div><!-- /.page-content -->
-			</div><!-- /.main-content -->
+				<div class="menu-box">
+					<ul class="menu-nav">
+						<li class="menu-nav-pick"><a href="trade_record.html">支付</a></li>
+						<li><a href="trade_refund.html">退款</a></li>
+						<li><a href="trade_cash.html">提现</a></li>
+					</ul>
+					<ul class="search-keylist">
+						<li class="search-fircell">创建时间：<input class="date-picker search-input w28" type="text" placeholder="开始时间" id="startTime" /><input class="search-icon-v" type="text" readonly="readonly" /> 至 <input class="date-picker search-input w28" type="text" placeholder="结束时间" id="endTime" /><input class="search-icon-v" type="text" readonly="readonly" /></li>
+						<li class="search-seccell">交易状态：
+							<select class="search-select w50" id="tradeState">
+								<option value="">请选择</option>
+								<option value="0">交易成功</option>
+								<option value="3">交易失败</option>
+								<!--<option value="2">支付中</option>-->
+								<option value="1">待支付</option>
+								<option value="4">已退款</option>
+							</select>
+						</li>
+						<li class="search-thrcell">商户订单号：<input id="merchantExtNo" class="search-input w60" type="text"  value="" /></li>
+					    <li class="search-fourcell">
+					    	  <input id="checkMes" class="search-button" type="button"  value="查询" />
+					    	  <input id="reset-btn" class="search-reset" type="button"  value="重置" />
+					    </li>
+					</ul>
+                    <div class="trade-table">
+					    <table id="lists" class="table table-bordered table-striped"></table>
+                    </div>
+				</div>
+			</div>
+			<!-- /.main-content -->
 
 			<div class="footer">
 				<div class="footer-inner">
 					<!-- #section:basics/footer -->
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
-						</span>
-
-						&nbsp; &nbsp;
-						<span class="action-buttons">
-							<a href="#">
-								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
+							<span class="company">捷顺金融科技技术服务有限公司</span>
 						</span>
 					</div>
-
-					<!-- /section:basics/footer -->
 				</div>
 			</div>
-
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
-		<div id="alert-refund" class="hide">
-			<div class="step-pane active">
-	
+		</div>
+		<!-- /.main-container -->
+		
+		<!-- 退款弹窗 -->
+		<div id="alertBox" class="hide"></div>
+		
+        <div id="alert-refund" class="hide">
+        	<div class="alert-content" style="padding:0;"> 
+				<div class="refund-input-cell">
+					<label class="refund-label">商品名称:</label>
+					<input id="goodsName" type="text" readonly="readonly" style="background:#ffffff!important"/>                   						
+				</div>
+				<div class="refund-err"></div>
+				<div class="refund-input-cell">
+					<label class="refund-label">商户订单号:</label>
+					<input id="orderNum" type="text" readonly="readonly" style="background:#ffffff!important" />
+				</div>
+				<div class="refund-err"></div>
+				<div class="refund-input-cell" style="border:1px solid #d1d1d1;">
+					<label class="refund-label" style="margin-left:5px;">退款金额（元）:</label>
+					<input id="refundSum" type="text" placeholder="请输入退款金额"/>
+				</div>
+				<div class="refund-err" id="refundSum_err"></div>
+				<div class="refund-input-cell">
+					<label class="refund-label align-left">退款原因:</label>
+					<input id="orderNum" type="text" readonly="readonly" style="background:#ffffff!important;text-align:right;" value="（非必填）"/>
+					<div class="remark-cell"><textarea class="refund-remark" id="refundReason"></textarea></div>               
+				</div>
+				<div class="refund-err"></div>
+			</div>
+        	
+        	
+			<!--<div class="step-pane active">
 				<form class="form-horizontal" id="sample-form">				
 					<div class="form-group has-warning">
 						<label for="userOpenName" class="col-xs-12 col-sm-3 control-label no-padding-right">商品名称:</label>
@@ -475,7 +278,7 @@
 					</div>	
 
 					<div class="form-group has-warning">
-						<label for="openBranch" class="col-xs-12 col-sm-3 control-label no-padding-right">商户订单号:</label>
+						<label for="orderNum" class="col-xs-12 col-sm-3 control-label no-padding-right">商户订单号:</label>
 						<div class="col-xs-12 col-sm-5">
 							<span class="block input-icon input-icon-right">
 								<input type="text" id="orderNum" class="width-100" readonly="readonly">
@@ -485,7 +288,7 @@
 						<div class="help-block col-xs-12 col-sm-reset inline"></div>
 					</div>
 					<div class="form-group has-warning">
-						<label for="openProvince" class="col-xs-12 col-sm-3 control-label no-padding-right">退款金额:</label>
+						<label for="refundSum" class="col-xs-12 col-sm-3 control-label no-padding-right">退款金额:</label>
 						<div class="col-xs-12 col-sm-5">
 							<span class="block input-icon input-icon-right">
 								<input type="text" id="refundSum" class="width-100">
@@ -495,7 +298,7 @@
 						<div class="help-block col-xs-12 col-sm-reset inline"> （必填） </div>
 					</div>
 					<div class="form-group has-warning">
-						<label for="openCity" class="col-xs-12 col-sm-3 control-label no-padding-right">退款原因：</label>
+						<label for="refundReason" class="col-xs-12 col-sm-3 control-label no-padding-right">退款原因：</label>
 						<div class="col-xs-12 col-sm-5">
 							<span class="block input-icon input-icon-right">
 								<textarea id="refundReason" class="width-100"></textarea>
@@ -505,16 +308,15 @@
 						<div class="help-block col-xs-12 col-sm-reset inline"> （非必填） </div>
 					</div>			
 				</form>		
-			</div>	
-		</div><!-- #dialog-confirm -->
-
-
+			</div>	-->
+		</div>
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../../js/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='../../js/jquery.min.js'>" + "<" + "/script>");
 		</script>
+		<script src="../../js/jquery.min.js"></script>
 
 		<!-- <![endif]-->
 
@@ -524,20 +326,44 @@
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 		</script>
 		<script src="../../js/bootstrap.min.js"></script>
-
+		<script src="../../js/bootstrap-table.min.js"></script>
+		<script src="../../js/bootstrap-table-zh-CN.js"></script>
+		<script src="../../js/num_input.js"></script>
 		<!-- page specific plugin scripts -->
-		<script src="../../js/jquery-ui.min.js"></script>
+
+		<!--[if lte IE 8]>
+		  <script src="../../js/excanvas.min.js"></script>
+		<![endif]-->
+        <script src="../../js/jquery-ui.min.js"></script>
 		<script src="../../js/jquery.ui.touch-punch.min.js"></script>
-		<script type="text/javascript" src="../../js/bootstrap-datepicker.min.js" ></script>
+
 		<!-- ace scripts -->
 		<script src="../../js/ace-elements.min.js"></script>
 		<script src="../../js/ace.min.js"></script>
-		<script type="text/javascript" src="../../js/common.js" ></script>
-		<script type="text/javascript" src="../../js/trade_record.js" ></script>
-		<!-- inline scripts related to this page -->
 
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript" src="../../js/public.js"></script>
+		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+
+		<script type="text/javascript">
+			ace.vars['base'] = '..';
+		</script>
+
+		<!-- page specific plugin scripts -->
+		<script src="../../js/bootstrap-datepicker.min.js"></script>
+		<script src="../../js/bootstrap-datepicker.zh-CN.js"></script>
+
+		<!-- 自定义 -->
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/trade_record.js"></script>
+
+		<div class="tooltip top in" style="display: none;">
+			<div class="tooltip-inner"></div>
+		</div>
+		
 	</body>
+
 </html>

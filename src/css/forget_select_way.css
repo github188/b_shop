@@ -1,0 +1,101 @@
+.keep-left{
+	float:left;
+}
+.keep-right{
+	float:right;
+}
+.light-login{
+	background: #FFFFFF;
+}
+.login-main{
+	width:100%;
+	overflow:hidden;
+}
+.login-barbox{
+	width:100%;
+	min-height:340px;
+	overflow:hidden;
+	position:relative;
+}
+.login-barbox img{
+	display:inline-block;
+}
+.login-barbox .login-barlogo{
+	width:230px;
+	overflow:hidden;
+	position:absolute;
+	top:93px;
+	left:50%;
+	margin-left:-115px;
+}
+.login-barbox .login-barlogo img{
+	width:100%;
+	height:auto;
+	display:inline-block;
+}
+
+
+.select-way-cell{
+	padding: 20px;
+	width:600px;
+	margin: 0 auto;
+	border:1px solid #D1D1D1;
+	margin-top:20px;
+}
+.select-way-cell h4{
+	margin:20px 0;
+	font-size: 14px;
+	color: #333333;
+}
+.way-cell{
+	padding: 10px 0;
+}
+.way-cell:after{
+	content:"";
+	display: block;
+	height:0;
+	overflow: hidden;
+	clear: both;
+}
+.way-cell .way-icon{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+.way-cell .way-content{
+	display: inline-block;
+	vertical-align: middle;
+	width:200px;
+	margin-left: 50px;
+	font-size: 14px;
+	color:#333333;
+	text-align: center;
+}
+.way-cell .way-btn{
+	display: inline-block;
+	vertical-align: middle;
+	width:100px;
+	line-height: 30px;
+	margin-left: 30px;
+	border: 0;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 14px;
+	background: #ff6f41;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.btn-cell{
+	text-align: center;
+	margin-top:40px;
+}
+.btn-cell .btn-back{
+	border: 0;
+	outline:none;
+	border-radius: 5px;
+	width: 100px;
+	height:40px;
+	
+}

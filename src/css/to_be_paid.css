@@ -1,0 +1,56 @@
+.authentication-cell{
+	width:100%;
+}
+.authentication-cell .authentication-title{
+	height: 74px;
+	text-align: center;
+	color:#333333;
+	font-size: 20px;
+	background:#f8f8f8;
+	line-height: 74px;
+}
+.authentication-cell .authentication-content{
+	padding-top:58px;
+}
+.authentication-cell .authentication-content .authentication-tips{
+	margin-bottom: 102px;
+}
+.authentication-cell .authentication-content .authentication-tips p{
+	text-align: center;
+	font-size: 14px;
+	color:#878787;
+	margin-bottom: 18px;
+}
+.authentication-cell .authentication-content .authentication-input{
+	width:300px;
+	margin:0 auto;
+	border-bottom:1px solid #DCDCDC;
+	padding: 18px 0;
+}
+.authentication-cell .authentication-content .authentication-input span{
+	display: inline-block;
+	font-size: 14px;
+	color:#878787;
+	line-height: 1;
+}
+.authentication-cell .authentication-content .authentication-input input{
+	vertical-align: middle;
+	font-size: 14px;
+	color:#000000;
+	border: 0;
+	outline: none;
+}
+.authentication-cell .authentication-btn{
+	padding-top:80px;
+}
+.authentication-cell .authentication-btn .confirm-btn{
+	width:200px;
+	height:40px;
+	background:#ff6f41;
+	color:#FFFFFF;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
